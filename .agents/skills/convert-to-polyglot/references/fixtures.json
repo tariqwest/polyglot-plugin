@@ -1,0 +1,763 @@
+{
+  "version": 1,
+  "defaultOutDir": "~/Developer/harness-plugins",
+  "notes": "priority = first smoke matrix (8). wave2 = +20 targets including 12 MCP-bundled plugins. catalog = broader candidate list by harness. Use run-fixtures.mjs --set wave2|priority|all|mcp. wave3 = alternative harness formats (Gemini, OpenCode, Copilot, Antigravity, Hermes, multi-alt) \u2014 NOT Claude/Codex/Cursor-primary.",
+  "priority": [
+    {
+      "id": "ralph-loop",
+      "harness": "cursor",
+      "name": "ralph-loop",
+      "envRoot": "RALPH_LOOP_ROOT",
+      "repo": "https://github.com/cursor/plugins.git",
+      "subdir": "ralph-loop",
+      "description": "Official Cursor plugin \u2014 iterative Ralph loop",
+      "hasMcp": false
+    },
+    {
+      "id": "superpowers",
+      "harness": "claude",
+      "name": "superpowers",
+      "envRoot": "SUPERPOWERS_ROOT",
+      "repo": "https://github.com/obra/superpowers.git",
+      "subdir": "",
+      "description": "Popular Claude Code methodology pack",
+      "hasMcp": false
+    },
+    {
+      "id": "addy-agent-skills",
+      "harness": "codex",
+      "name": "addy-agent-skills",
+      "envRoot": "ADDY_AGENT_SKILLS_ROOT",
+      "repo": "https://github.com/addyosmani/agent-skills.git",
+      "subdir": "",
+      "description": "Lifecycle skills pack with Codex/Cursor/Claude install paths",
+      "hasMcp": false
+    },
+    {
+      "id": "sanctum",
+      "harness": "claude",
+      "name": "sanctum",
+      "envRoot": "SANCTUM_ROOT",
+      "repo": "https://github.com/athola/claude-night-market.git",
+      "subdir": "plugins/sanctum",
+      "description": "Night Market nested Claude plugin \u2014 git/PR workflows",
+      "hasMcp": false
+    },
+    {
+      "id": "python-development",
+      "harness": "multi",
+      "name": "python-development",
+      "envRoot": "PYTHON_DEVELOPMENT_ROOT",
+      "repo": "https://github.com/wshobson/agents.git",
+      "subdir": "plugins/python-development",
+      "description": "wshobson composite plugin \u2014 agents + skills + commands",
+      "hasMcp": false
+    },
+    {
+      "id": "dibmaster-cursor-skills",
+      "harness": "cursor",
+      "name": "dibmaster-cursor-skills",
+      "envRoot": "DIBMASTER_CURSOR_SKILLS_ROOT",
+      "repo": "https://github.com/DIBmaster/cursor-skills.git",
+      "subdir": "",
+      "description": "Cursor skills-only pack (review/deploy/PM)",
+      "hasMcp": false
+    },
+    {
+      "id": "mongodb-agent-skills",
+      "harness": "multi",
+      "name": "mongodb-agent-skills",
+      "envRoot": "MONGODB_AGENT_SKILLS_ROOT",
+      "repo": "https://github.com/mongodb/agent-skills.git",
+      "subdir": "",
+      "description": "Official MongoDB skills + marketplace plugins",
+      "hasMcp": true
+    },
+    {
+      "id": "deckling",
+      "harness": "claude",
+      "name": "deckling",
+      "envRoot": "DECKLING_ROOT",
+      "repo": "https://github.com/ooiyeefei/ccc.git",
+      "subdir": "plugins/deckling",
+      "description": "ccc nested Claude plugin \u2014 PPTX generation",
+      "hasMcp": false
+    }
+  ],
+  "catalog": {
+    "claude": [
+      {
+        "id": "superpowers",
+        "repo": "https://github.com/obra/superpowers.git",
+        "subdir": ""
+      },
+      {
+        "id": "claude-code-kit",
+        "repo": "https://github.com/This-HW/claude-code-kit.git",
+        "subdir": ""
+      },
+      {
+        "id": "sanctum",
+        "repo": "https://github.com/athola/claude-night-market.git",
+        "subdir": "plugins/sanctum"
+      },
+      {
+        "id": "pensive",
+        "repo": "https://github.com/athola/claude-night-market.git",
+        "subdir": "plugins/pensive"
+      },
+      {
+        "id": "engineering-workflow-plugin",
+        "repo": "https://github.com/mhattingpete/claude-skills-marketplace.git",
+        "subdir": "engineering-workflow-plugin"
+      },
+      {
+        "id": "deckling",
+        "repo": "https://github.com/ooiyeefei/ccc.git",
+        "subdir": "plugins/deckling"
+      },
+      {
+        "id": "bash-safety-guard",
+        "repo": "https://github.com/ooiyeefei/ccc.git",
+        "subdir": "plugins/bash-safety-guard"
+      },
+      {
+        "id": "tonone",
+        "repo": "https://github.com/tonone-ai/tonone.git",
+        "subdir": ""
+      },
+      {
+        "id": "official-github",
+        "repo": "https://github.com/anthropics/claude-plugins-official.git",
+        "subdir": "external_plugins/github",
+        "hasMcp": true
+      },
+      {
+        "id": "official-playwright",
+        "repo": "https://github.com/anthropics/claude-plugins-official.git",
+        "subdir": "external_plugins/playwright",
+        "hasMcp": true
+      },
+      {
+        "id": "official-linear",
+        "repo": "https://github.com/anthropics/claude-plugins-official.git",
+        "subdir": "external_plugins/linear",
+        "hasMcp": true
+      },
+      {
+        "id": "official-context7",
+        "repo": "https://github.com/anthropics/claude-plugins-official.git",
+        "subdir": "external_plugins/context7",
+        "hasMcp": true
+      },
+      {
+        "id": "official-firebase",
+        "repo": "https://github.com/anthropics/claude-plugins-official.git",
+        "subdir": "external_plugins/firebase",
+        "hasMcp": true
+      },
+      {
+        "id": "official-terraform",
+        "repo": "https://github.com/anthropics/claude-plugins-official.git",
+        "subdir": "external_plugins/terraform",
+        "hasMcp": true
+      },
+      {
+        "id": "official-serena",
+        "repo": "https://github.com/anthropics/claude-plugins-official.git",
+        "subdir": "external_plugins/serena",
+        "hasMcp": true
+      },
+      {
+        "id": "official-gitlab",
+        "repo": "https://github.com/anthropics/claude-plugins-official.git",
+        "subdir": "external_plugins/gitlab",
+        "hasMcp": true
+      },
+      {
+        "id": "ucoz-agent-skills",
+        "repo": "https://github.com/ucoz-skills/agent-skills.git",
+        "subdir": "",
+        "hasMcp": true
+      },
+      {
+        "id": "heroku-claude-adapter",
+        "repo": "https://github.com/dsouzaAnush/heroku-skills.git",
+        "subdir": "adapters/claude/heroku",
+        "hasMcp": true
+      }
+    ],
+    "codex": [
+      {
+        "id": "addy-agent-skills",
+        "repo": "https://github.com/addyosmani/agent-skills.git",
+        "subdir": ""
+      },
+      {
+        "id": "openai-skills",
+        "repo": "https://github.com/openai/skills.git",
+        "subdir": ""
+      },
+      {
+        "id": "ok-skills",
+        "repo": "https://github.com/mxyhi/ok-skills.git",
+        "subdir": ""
+      },
+      {
+        "id": "planning-with-files",
+        "repo": "https://github.com/OthmanAdi/planning-with-files.git",
+        "subdir": ".codex/skills/planning-with-files"
+      },
+      {
+        "id": "mongodb-agent-skills",
+        "repo": "https://github.com/mongodb/agent-skills.git",
+        "subdir": ""
+      },
+      {
+        "id": "python-development",
+        "repo": "https://github.com/wshobson/agents.git",
+        "subdir": "plugins/python-development"
+      }
+    ],
+    "cursor": [
+      {
+        "id": "ralph-loop",
+        "repo": "https://github.com/cursor/plugins.git",
+        "subdir": "ralph-loop"
+      },
+      {
+        "id": "continual-learning",
+        "repo": "https://github.com/cursor/plugins.git",
+        "subdir": "continual-learning"
+      },
+      {
+        "id": "create-plugin",
+        "repo": "https://github.com/cursor/plugins.git",
+        "subdir": "create-plugin"
+      },
+      {
+        "id": "agent-compatibility",
+        "repo": "https://github.com/cursor/plugins.git",
+        "subdir": "agent-compatibility"
+      },
+      {
+        "id": "dibmaster-cursor-skills",
+        "repo": "https://github.com/DIBmaster/cursor-skills.git",
+        "subdir": ""
+      },
+      {
+        "id": "rasa-cursor-plugin",
+        "repo": "https://github.com/RasaHQ/rasa-cursor-plugin.git",
+        "subdir": ""
+      },
+      {
+        "id": "teaching",
+        "repo": "https://github.com/cursor/plugins.git",
+        "subdir": "teaching"
+      },
+      {
+        "id": "cursor-notion-plugin",
+        "repo": "https://github.com/makenotion/cursor-notion-plugin.git",
+        "subdir": "",
+        "hasMcp": true
+      },
+      {
+        "id": "cursor-harness-plugin",
+        "repo": "https://github.com/thisrohangupta/cursor-harness-plugin.git",
+        "subdir": "",
+        "hasMcp": true
+      }
+    ],
+    "alt-harness": [
+      {
+        "id": "gemini-api-skills",
+        "repo": "https://github.com/google-gemini/gemini-skills.git",
+        "subdir": "",
+        "harness": "gemini",
+        "format": "gemini-skills SKILL.md",
+        "hasMcp": false
+      },
+      {
+        "id": "gemini-skills-extension",
+        "repo": "https://github.com/Giorgioeab/gemini-skills.git",
+        "subdir": "",
+        "harness": "gemini",
+        "format": "gemini-extension.json",
+        "hasMcp": true
+      },
+      {
+        "id": "agentic-design-patterns-extension",
+        "repo": "https://github.com/hajekim/agentic-design-patterns-extension.git",
+        "subdir": "",
+        "harness": "gemini",
+        "format": "gemini-extension + mcp_server.py",
+        "hasMcp": true
+      },
+      {
+        "id": "gemini-cli-skillz",
+        "repo": "https://github.com/intellectronica/gemini-cli-skillz.git",
+        "subdir": "",
+        "harness": "gemini",
+        "format": "gemini-extension.json MCP",
+        "hasMcp": true
+      },
+      {
+        "id": "opencode-agent-skills",
+        "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills.git",
+        "subdir": "",
+        "harness": "opencode",
+        "format": "opencode plugin.ts",
+        "hasMcp": false
+      },
+      {
+        "id": "cc-sdd",
+        "repo": "https://github.com/gotalab/cc-sdd.git",
+        "subdir": "",
+        "harness": "multi-alt",
+        "format": "multi adapter SDD",
+        "hasMcp": false
+      },
+      {
+        "id": "copilot-context-engineering",
+        "repo": "https://github.com/github/awesome-copilot.git",
+        "subdir": "plugins/context-engineering",
+        "harness": "copilot",
+        "format": "Copilot plugin.json monorepo paths",
+        "hasMcp": false
+      },
+      {
+        "id": "copilot-frontend-web-dev",
+        "repo": "https://github.com/github/awesome-copilot.git",
+        "subdir": "plugins/frontend-web-dev",
+        "harness": "copilot",
+        "format": "Copilot plugin",
+        "hasMcp": false
+      },
+      {
+        "id": "copilot-database-data-management",
+        "repo": "https://github.com/github/awesome-copilot.git",
+        "subdir": "plugins/database-data-management",
+        "harness": "copilot",
+        "format": "Copilot plugin",
+        "hasMcp": false
+      },
+      {
+        "id": "copilot-azure-cloud-development",
+        "repo": "https://github.com/github/awesome-copilot.git",
+        "subdir": "plugins/azure-cloud-development",
+        "harness": "copilot",
+        "format": "Copilot plugin",
+        "hasMcp": false
+      },
+      {
+        "id": "agentic-stack",
+        "repo": "https://github.com/codejunkie99/agentic-stack.git",
+        "subdir": "",
+        "harness": "antigravity",
+        "format": ".agent/skills",
+        "hasMcp": false
+      },
+      {
+        "id": "ag-kit",
+        "repo": "https://github.com/vudovn/ag-kit.git",
+        "subdir": "",
+        "harness": "antigravity",
+        "format": ".agent + mcp_config",
+        "hasMcp": true
+      },
+      {
+        "id": "softspark-ai-toolkit-app",
+        "repo": "https://github.com/softspark/ai-toolkit.git",
+        "subdir": "app",
+        "harness": "multi-alt",
+        "format": "app/skills multi-emitter",
+        "hasMcp": false
+      },
+      {
+        "id": "awesome-hermes-skills",
+        "repo": "https://github.com/ZeroPointRepo/awesome-hermes-skills.git",
+        "subdir": "",
+        "harness": "hermes",
+        "format": "Hermes SKILL.md",
+        "hasMcp": false
+      },
+      {
+        "id": "agent-skill-creator",
+        "repo": "https://github.com/FrancyJGLisboa/agent-skill-creator.git",
+        "subdir": "",
+        "harness": "multi-alt",
+        "format": "SKILL.md+AGENTS.md emitters",
+        "hasMcp": false
+      }
+    ]
+  },
+  "wave2": [
+    {
+      "id": "official-github",
+      "harness": "claude",
+      "name": "official-github",
+      "envRoot": "OFFICIAL_GITHUB_ROOT",
+      "repo": "https://github.com/anthropics/claude-plugins-official.git",
+      "subdir": "external_plugins/github",
+      "hasMcp": true,
+      "description": "Official Claude plugin \u2014 GitHub MCP + skills"
+    },
+    {
+      "id": "official-playwright",
+      "harness": "claude",
+      "name": "official-playwright",
+      "envRoot": "OFFICIAL_PLAYWRIGHT_ROOT",
+      "repo": "https://github.com/anthropics/claude-plugins-official.git",
+      "subdir": "external_plugins/playwright",
+      "hasMcp": true,
+      "description": "Official Claude plugin \u2014 Playwright MCP"
+    },
+    {
+      "id": "official-linear",
+      "harness": "claude",
+      "name": "official-linear",
+      "envRoot": "OFFICIAL_LINEAR_ROOT",
+      "repo": "https://github.com/anthropics/claude-plugins-official.git",
+      "subdir": "external_plugins/linear",
+      "hasMcp": true,
+      "description": "Official Claude plugin \u2014 Linear MCP"
+    },
+    {
+      "id": "official-context7",
+      "harness": "claude",
+      "name": "official-context7",
+      "envRoot": "OFFICIAL_CONTEXT7_ROOT",
+      "repo": "https://github.com/anthropics/claude-plugins-official.git",
+      "subdir": "external_plugins/context7",
+      "hasMcp": true,
+      "description": "Official Claude plugin \u2014 Context7 docs MCP"
+    },
+    {
+      "id": "official-firebase",
+      "harness": "claude",
+      "name": "official-firebase",
+      "envRoot": "OFFICIAL_FIREBASE_ROOT",
+      "repo": "https://github.com/anthropics/claude-plugins-official.git",
+      "subdir": "external_plugins/firebase",
+      "hasMcp": true,
+      "description": "Official Claude plugin \u2014 Firebase MCP"
+    },
+    {
+      "id": "official-terraform",
+      "harness": "claude",
+      "name": "official-terraform",
+      "envRoot": "OFFICIAL_TERRAFORM_ROOT",
+      "repo": "https://github.com/anthropics/claude-plugins-official.git",
+      "subdir": "external_plugins/terraform",
+      "hasMcp": true,
+      "description": "Official Claude plugin \u2014 Terraform MCP"
+    },
+    {
+      "id": "official-serena",
+      "harness": "claude",
+      "name": "official-serena",
+      "envRoot": "OFFICIAL_SERENA_ROOT",
+      "repo": "https://github.com/anthropics/claude-plugins-official.git",
+      "subdir": "external_plugins/serena",
+      "hasMcp": true,
+      "description": "Official Claude plugin \u2014 Serena code-intel MCP"
+    },
+    {
+      "id": "official-gitlab",
+      "harness": "claude",
+      "name": "official-gitlab",
+      "envRoot": "OFFICIAL_GITLAB_ROOT",
+      "repo": "https://github.com/anthropics/claude-plugins-official.git",
+      "subdir": "external_plugins/gitlab",
+      "hasMcp": true,
+      "description": "Official Claude plugin \u2014 GitLab MCP"
+    },
+    {
+      "id": "cursor-notion-plugin",
+      "harness": "cursor",
+      "name": "cursor-notion-plugin",
+      "envRoot": "CURSOR_NOTION_PLUGIN_ROOT",
+      "repo": "https://github.com/makenotion/cursor-notion-plugin.git",
+      "subdir": "",
+      "hasMcp": true,
+      "description": "Official Notion Cursor plugin \u2014 skills + hosted Notion MCP"
+    },
+    {
+      "id": "cursor-harness-plugin",
+      "harness": "cursor",
+      "name": "cursor-harness-plugin",
+      "envRoot": "CURSOR_HARNESS_PLUGIN_ROOT",
+      "repo": "https://github.com/thisrohangupta/cursor-harness-plugin.git",
+      "subdir": "",
+      "hasMcp": true,
+      "description": "Harness.io Cursor plugin \u2014 skills + Harness MCP v2 + hooks"
+    },
+    {
+      "id": "ucoz-agent-skills",
+      "harness": "multi",
+      "name": "ucoz-agent-skills",
+      "envRoot": "UCOZ_AGENT_SKILLS_ROOT",
+      "repo": "https://github.com/ucoz-skills/agent-skills.git",
+      "subdir": "",
+      "hasMcp": true,
+      "description": "uCoz skills + bundled ucoz-mcp for Cursor/Codex/Claude"
+    },
+    {
+      "id": "heroku-claude-adapter",
+      "harness": "claude",
+      "name": "heroku-claude-adapter",
+      "envRoot": "HEROKU_CLAUDE_ADAPTER_ROOT",
+      "repo": "https://github.com/dsouzaAnush/heroku-skills.git",
+      "subdir": "adapters/claude/heroku",
+      "hasMcp": true,
+      "description": "Heroku Claude adapter \u2014 skills + heroku-code-mcp wiring"
+    },
+    {
+      "id": "continual-learning",
+      "harness": "cursor",
+      "name": "continual-learning",
+      "envRoot": "CONTINUAL_LEARNING_ROOT",
+      "repo": "https://github.com/cursor/plugins.git",
+      "subdir": "continual-learning",
+      "hasMcp": false,
+      "description": "Official Cursor plugin \u2014 AGENTS.md continual learning"
+    },
+    {
+      "id": "create-plugin",
+      "harness": "cursor",
+      "name": "create-plugin",
+      "envRoot": "CREATE_PLUGIN_ROOT",
+      "repo": "https://github.com/cursor/plugins.git",
+      "subdir": "create-plugin",
+      "hasMcp": false,
+      "description": "Official Cursor plugin \u2014 scaffold/validate plugins"
+    },
+    {
+      "id": "agent-compatibility",
+      "harness": "cursor",
+      "name": "agent-compatibility",
+      "envRoot": "AGENT_COMPATIBILITY_ROOT",
+      "repo": "https://github.com/cursor/plugins.git",
+      "subdir": "agent-compatibility",
+      "hasMcp": false,
+      "description": "Official Cursor plugin \u2014 agent-native workflow audits"
+    },
+    {
+      "id": "pensive",
+      "harness": "claude",
+      "name": "pensive",
+      "envRoot": "PENSIVE_ROOT",
+      "repo": "https://github.com/athola/claude-night-market.git",
+      "subdir": "plugins/pensive",
+      "hasMcp": false,
+      "description": "Night Market nested plugin \u2014 code/architecture review"
+    },
+    {
+      "id": "engineering-workflow-plugin",
+      "harness": "claude",
+      "name": "engineering-workflow-plugin",
+      "envRoot": "ENGINEERING_WORKFLOW_PLUGIN_ROOT",
+      "repo": "https://github.com/mhattingpete/claude-skills-marketplace.git",
+      "subdir": "engineering-workflow-plugin",
+      "hasMcp": false,
+      "description": "Claude skills marketplace \u2014 git/test/review workflows"
+    },
+    {
+      "id": "claude-code-kit",
+      "harness": "claude",
+      "name": "claude-code-kit",
+      "envRoot": "CLAUDE_CODE_KIT_ROOT",
+      "repo": "https://github.com/This-HW/claude-code-kit.git",
+      "subdir": "",
+      "hasMcp": false,
+      "description": "Anthropic community catalog kit \u2014 agents+skills+hooks"
+    },
+    {
+      "id": "planning-with-files",
+      "harness": "codex",
+      "name": "planning-with-files",
+      "envRoot": "PLANNING_WITH_FILES_ROOT",
+      "repo": "https://github.com/OthmanAdi/planning-with-files.git",
+      "subdir": ".codex/skills/planning-with-files",
+      "hasMcp": false,
+      "description": "Codex-oriented single skill \u2014 file-based planning"
+    },
+    {
+      "id": "ok-skills",
+      "harness": "codex",
+      "name": "ok-skills",
+      "envRoot": "OK_SKILLS_ROOT",
+      "repo": "https://github.com/mxyhi/ok-skills.git",
+      "subdir": "",
+      "hasMcp": false,
+      "description": "Curated multi-skill pack for Codex/Claude/Cursor"
+    }
+  ],
+  "wave3": [
+    {
+      "id": "gemini-api-skills",
+      "harness": "gemini",
+      "format": "gemini-skills SKILL.md",
+      "name": "gemini-api-skills",
+      "envRoot": "GEMINI_API_SKILLS_ROOT",
+      "repo": "https://github.com/google-gemini/gemini-skills.git",
+      "subdir": "",
+      "hasMcp": false,
+      "description": "Official Google Gemini API skills"
+    },
+    {
+      "id": "gemini-skills-extension",
+      "harness": "gemini",
+      "format": "gemini-extension.json",
+      "name": "gemini-skills-extension",
+      "envRoot": "GEMINI_SKILLS_EXTENSION_ROOT",
+      "repo": "https://github.com/Giorgioeab/gemini-skills.git",
+      "subdir": "",
+      "hasMcp": true,
+      "description": "Gemini CLI extension packaging"
+    },
+    {
+      "id": "agentic-design-patterns-extension",
+      "harness": "gemini",
+      "format": "gemini-extension + mcp_server.py",
+      "name": "agentic-design-patterns-extension",
+      "envRoot": "AGENTIC_DESIGN_PATTERNS_EXTENSION_ROOT",
+      "repo": "https://github.com/hajekim/agentic-design-patterns-extension.git",
+      "subdir": "",
+      "hasMcp": true,
+      "description": "28 design pattern skills + MCP"
+    },
+    {
+      "id": "gemini-cli-skillz",
+      "harness": "gemini",
+      "format": "gemini-extension.json MCP",
+      "name": "gemini-cli-skillz",
+      "envRoot": "GEMINI_CLI_SKILLZ_ROOT",
+      "repo": "https://github.com/intellectronica/gemini-cli-skillz.git",
+      "subdir": "",
+      "hasMcp": true,
+      "description": "skillz MCP extension"
+    },
+    {
+      "id": "opencode-agent-skills",
+      "harness": "opencode",
+      "format": "opencode plugin.ts",
+      "name": "opencode-agent-skills",
+      "envRoot": "OPENCODE_AGENT_SKILLS_ROOT",
+      "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills.git",
+      "subdir": "",
+      "hasMcp": false,
+      "description": "OpenCode skill-loading plugin"
+    },
+    {
+      "id": "cc-sdd",
+      "harness": "multi-alt",
+      "format": "multi adapter SDD",
+      "name": "cc-sdd",
+      "envRoot": "CC_SDD_ROOT",
+      "repo": "https://github.com/gotalab/cc-sdd.git",
+      "subdir": "",
+      "hasMcp": false,
+      "description": "SDD multi-CLI skills"
+    },
+    {
+      "id": "copilot-context-engineering",
+      "harness": "copilot",
+      "format": "Copilot plugin.json monorepo paths",
+      "name": "copilot-context-engineering",
+      "envRoot": "COPILOT_CONTEXT_ENGINEERING_ROOT",
+      "repo": "https://github.com/github/awesome-copilot.git",
+      "subdir": "plugins/context-engineering",
+      "hasMcp": false,
+      "description": "Copilot context engineering plugin"
+    },
+    {
+      "id": "copilot-frontend-web-dev",
+      "harness": "copilot",
+      "format": "Copilot plugin",
+      "name": "copilot-frontend-web-dev",
+      "envRoot": "COPILOT_FRONTEND_WEB_DEV_ROOT",
+      "repo": "https://github.com/github/awesome-copilot.git",
+      "subdir": "plugins/frontend-web-dev",
+      "hasMcp": false,
+      "description": "Copilot frontend plugin"
+    },
+    {
+      "id": "copilot-database-data-management",
+      "harness": "copilot",
+      "format": "Copilot plugin",
+      "name": "copilot-database-data-management",
+      "envRoot": "COPILOT_DATABASE_DATA_MANAGEMENT_ROOT",
+      "repo": "https://github.com/github/awesome-copilot.git",
+      "subdir": "plugins/database-data-management",
+      "hasMcp": false,
+      "description": "Copilot database plugin"
+    },
+    {
+      "id": "copilot-azure-cloud-development",
+      "harness": "copilot",
+      "format": "Copilot plugin",
+      "name": "copilot-azure-cloud-development",
+      "envRoot": "COPILOT_AZURE_CLOUD_DEVELOPMENT_ROOT",
+      "repo": "https://github.com/github/awesome-copilot.git",
+      "subdir": "plugins/azure-cloud-development",
+      "hasMcp": false,
+      "description": "Copilot Azure plugin"
+    },
+    {
+      "id": "agentic-stack",
+      "harness": "antigravity",
+      "format": ".agent/skills",
+      "name": "agentic-stack",
+      "envRoot": "AGENTIC_STACK_ROOT",
+      "repo": "https://github.com/codejunkie99/agentic-stack.git",
+      "subdir": "",
+      "hasMcp": false,
+      "description": "portable .agent/ stack"
+    },
+    {
+      "id": "ag-kit",
+      "harness": "antigravity",
+      "format": ".agent + mcp_config",
+      "name": "ag-kit",
+      "envRoot": "AG_KIT_ROOT",
+      "repo": "https://github.com/vudovn/ag-kit.git",
+      "subdir": "",
+      "hasMcp": true,
+      "description": "Antigravity kit + MCP"
+    },
+    {
+      "id": "softspark-ai-toolkit-app",
+      "harness": "multi-alt",
+      "format": "app/skills multi-emitter",
+      "name": "softspark-ai-toolkit-app",
+      "envRoot": "SOFTSPARK_AI_TOOLKIT_APP_ROOT",
+      "repo": "https://github.com/softspark/ai-toolkit.git",
+      "subdir": "app",
+      "hasMcp": false,
+      "description": "source for Windsurf/Cline/Roo/OpenCode/Aider"
+    },
+    {
+      "id": "awesome-hermes-skills",
+      "harness": "hermes",
+      "format": "Hermes SKILL.md",
+      "name": "awesome-hermes-skills",
+      "envRoot": "AWESOME_HERMES_SKILLS_ROOT",
+      "repo": "https://github.com/ZeroPointRepo/awesome-hermes-skills.git",
+      "subdir": "",
+      "hasMcp": false,
+      "description": "Hermes skills library"
+    },
+    {
+      "id": "agent-skill-creator",
+      "harness": "multi-alt",
+      "format": "SKILL.md+AGENTS.md emitters",
+      "name": "agent-skill-creator",
+      "envRoot": "AGENT_SKILL_CREATOR_ROOT",
+      "repo": "https://github.com/FrancyJGLisboa/agent-skill-creator.git",
+      "subdir": "",
+      "hasMcp": false,
+      "description": "17-platform skill creator"
+    }
+  ]
+}
