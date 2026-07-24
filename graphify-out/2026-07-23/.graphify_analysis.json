@@ -1,0 +1,411 @@
+{
+  "communities": {
+    "0": [
+      "agents_skills_plug_me_in_scripts_install",
+      "agents_skills_plug_me_in_scripts_install_activationhints",
+      "agents_skills_plug_me_in_scripts_install_args",
+      "agents_skills_plug_me_in_scripts_install_asjson",
+      "agents_skills_plug_me_in_scripts_install_classification",
+      "agents_skills_plug_me_in_scripts_install_cwd",
+      "agents_skills_plug_me_in_scripts_install_filterskills",
+      "agents_skills_plug_me_in_scripts_install_harness",
+      "agents_skills_plug_me_in_scripts_install_installmcp",
+      "agents_skills_plug_me_in_scripts_install_installskillsfromclassification",
+      "agents_skills_plug_me_in_scripts_install_pickstrategy",
+      "agents_skills_plug_me_in_scripts_install_report",
+      "agents_skills_plug_me_in_scripts_install_strategy",
+      "agents_skills_plug_me_in_scripts_install_wantconvert",
+      "agents_skills_plug_me_in_scripts_lib_shared",
+      "agents_skills_plug_me_in_scripts_lib_shared_appendaiderconventions",
+      "agents_skills_plug_me_in_scripts_lib_shared_appendcopilotinstructions",
+      "agents_skills_plug_me_in_scripts_lib_shared_classifylocaltree",
+      "agents_skills_plug_me_in_scripts_lib_shared_collectenvrefs",
+      "agents_skills_plug_me_in_scripts_lib_shared_convert_scripts",
+      "agents_skills_plug_me_in_scripts_lib_shared_copyskilltodest",
+      "agents_skills_plug_me_in_scripts_lib_shared_ensuredir",
+      "agents_skills_plug_me_in_scripts_lib_shared_ensuregrokconfig",
+      "agents_skills_plug_me_in_scripts_lib_shared_extractmcpservers",
+      "agents_skills_plug_me_in_scripts_lib_shared_findmcpfiles",
+      "agents_skills_plug_me_in_scripts_lib_shared_findskills",
+      "agents_skills_plug_me_in_scripts_lib_shared_githubshorthand",
+      "agents_skills_plug_me_in_scripts_lib_shared_isdir",
+      "agents_skills_plug_me_in_scripts_lib_shared_isfile",
+      "agents_skills_plug_me_in_scripts_lib_shared_isprobablyremote",
+      "agents_skills_plug_me_in_scripts_lib_shared_isserverconfig",
+      "agents_skills_plug_me_in_scripts_lib_shared_listdir",
+      "agents_skills_plug_me_in_scripts_lib_shared_mcpdest",
+      "agents_skills_plug_me_in_scripts_lib_shared_mergemcpintofile",
+      "agents_skills_plug_me_in_scripts_lib_shared_native_type_to_harness",
+      "agents_skills_plug_me_in_scripts_lib_shared_normalizemcp",
+      "agents_skills_plug_me_in_scripts_lib_shared_parsegithubtreepath",
+      "agents_skills_plug_me_in_scripts_lib_shared_parseskillfrontmatter",
+      "agents_skills_plug_me_in_scripts_lib_shared_pathexists",
+      "agents_skills_plug_me_in_scripts_lib_shared_readjsonsafe",
+      "agents_skills_plug_me_in_scripts_lib_shared_readtext",
+      "agents_skills_plug_me_in_scripts_lib_shared_refs_dir",
+      "agents_skills_plug_me_in_scripts_lib_shared_resolvesourcetree",
+      "agents_skills_plug_me_in_scripts_lib_shared_runconvert",
+      "agents_skills_plug_me_in_scripts_lib_shared_script_dir",
+      "agents_skills_plug_me_in_scripts_lib_shared_skill_root",
+      "agents_skills_plug_me_in_scripts_lib_shared_skillinstalldir",
+      "agents_skills_plug_me_in_scripts_lib_shared_skillnamefrompath",
+      "agents_skills_plug_me_in_scripts_lib_shared_slugify",
+      "agents_skills_plug_me_in_scripts_lib_shared_tryskillscli",
+      "agents_skills_plug_me_in_scripts_lib_shared_walkfiles",
+      "agents_skills_plug_me_in_scripts_lib_shared_writecursorbridge",
+      "agents_skills_plug_me_in_scripts_lib_shared_writetext"
+    ],
+    "1": [
+      "agents_skills_convert_to_polyglot_scripts_convert",
+      "agents_skills_convert_to_polyglot_scripts_convert_args",
+      "agents_skills_convert_to_polyglot_scripts_convert_bridgeargs",
+      "agents_skills_convert_to_polyglot_scripts_convert_dest",
+      "agents_skills_convert_to_polyglot_scripts_convert_here",
+      "agents_skills_convert_to_polyglot_scripts_convert_runnode",
+      "agents_skills_convert_to_polyglot_scripts_convert_sourcearg",
+      "agents_skills_convert_to_polyglot_scripts_convert_vendorargs",
+      "agents_skills_convert_to_polyglot_scripts_generate_bridges",
+      "agents_skills_convert_to_polyglot_scripts_generate_bridges_args",
+      "agents_skills_convert_to_polyglot_scripts_generate_bridges_dest",
+      "agents_skills_convert_to_polyglot_scripts_inspect_source",
+      "agents_skills_convert_to_polyglot_scripts_inspect_source_args",
+      "agents_skills_convert_to_polyglot_scripts_inspect_source_layout",
+      "agents_skills_convert_to_polyglot_scripts_inspect_source_source",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_copytree",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_ensuredir",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_envrootfromname",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_isdir",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_parseargs",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_requirearg",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_rimraf",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_run",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_script_dir",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_script_exts",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_skill_root",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_toposix",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_which",
+      "agents_skills_convert_to_polyglot_scripts_run_fixtures",
+      "agents_skills_convert_to_polyglot_scripts_run_fixtures_clonerepo",
+      "agents_skills_convert_to_polyglot_scripts_run_fixtures_convert",
+      "agents_skills_convert_to_polyglot_scripts_run_fixtures_expandhome",
+      "agents_skills_convert_to_polyglot_scripts_run_fixtures_fixtures_path",
+      "agents_skills_convert_to_polyglot_scripts_run_fixtures_here",
+      "agents_skills_convert_to_polyglot_scripts_run_fixtures_loadfixtures",
+      "agents_skills_convert_to_polyglot_scripts_run_fixtures_main",
+      "agents_skills_convert_to_polyglot_scripts_run_fixtures_selecttargets",
+      "agents_skills_convert_to_polyglot_scripts_run_fixtures_validate",
+      "agents_skills_convert_to_polyglot_scripts_scaffold_package",
+      "agents_skills_convert_to_polyglot_scripts_scaffold_package_args",
+      "agents_skills_convert_to_polyglot_scripts_scaffold_package_dest",
+      "agents_skills_convert_to_polyglot_scripts_scaffold_package_dirs",
+      "agents_skills_convert_to_polyglot_scripts_scaffold_package_name"
+    ],
+    "2": [
+      "agents_skills_convert_to_polyglot_scripts_adapt_skills",
+      "agents_skills_convert_to_polyglot_scripts_adapt_skills_agentsdir",
+      "agents_skills_convert_to_polyglot_scripts_adapt_skills_args",
+      "agents_skills_convert_to_polyglot_scripts_adapt_skills_dest",
+      "agents_skills_convert_to_polyglot_scripts_adapt_skills_hasagents",
+      "agents_skills_convert_to_polyglot_scripts_adapt_skills_maxlines",
+      "agents_skills_convert_to_polyglot_scripts_adapt_skills_refsroot",
+      "agents_skills_convert_to_polyglot_scripts_adapt_skills_skillmetas",
+      "agents_skills_convert_to_polyglot_scripts_adapt_skills_skillsroot",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_isfile",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_isscriptfile",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_listdirs",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_listfiles",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_pathexists",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_readtext",
+      "agents_skills_convert_to_polyglot_scripts_lib_skill_md",
+      "agents_skills_convert_to_polyglot_scripts_lib_skill_md_condensebody",
+      "agents_skills_convert_to_polyglot_scripts_lib_skill_md_discoversourcelayout",
+      "agents_skills_convert_to_polyglot_scripts_lib_skill_md_enhancefrontmatter",
+      "agents_skills_convert_to_polyglot_scripts_lib_skill_md_escaperegexp",
+      "agents_skills_convert_to_polyglot_scripts_lib_skill_md_injectafterh1",
+      "agents_skills_convert_to_polyglot_scripts_lib_skill_md_listskillmetas",
+      "agents_skills_convert_to_polyglot_scripts_lib_skill_md_normalizeskillscriptsdir",
+      "agents_skills_convert_to_polyglot_scripts_lib_skill_md_parseskillmd",
+      "agents_skills_convert_to_polyglot_scripts_lib_skill_md_resolvemanifestskillpaths",
+      "agents_skills_convert_to_polyglot_scripts_lib_skill_md_rewriteharnesspaths",
+      "agents_skills_convert_to_polyglot_scripts_lib_skill_md_rootresolutionblock",
+      "agents_skills_convert_to_polyglot_scripts_lib_skill_md_scriptssection",
+      "agents_skills_convert_to_polyglot_scripts_lib_skill_md_serializeskillmd",
+      "agents_skills_convert_to_polyglot_scripts_lib_skill_md_upsertsection",
+      "agents_skills_convert_to_polyglot_scripts_validate_package",
+      "agents_skills_convert_to_polyglot_scripts_validate_package_args",
+      "agents_skills_convert_to_polyglot_scripts_validate_package_cursorrules",
+      "agents_skills_convert_to_polyglot_scripts_validate_package_dest",
+      "agents_skills_convert_to_polyglot_scripts_validate_package_errors",
+      "agents_skills_convert_to_polyglot_scripts_validate_package_mcp",
+      "agents_skills_convert_to_polyglot_scripts_validate_package_required",
+      "agents_skills_convert_to_polyglot_scripts_validate_package_skillsroot",
+      "agents_skills_convert_to_polyglot_scripts_validate_package_warnings"
+    ],
+    "3": [
+      "agents_skills_plug_me_in_scripts_classify_source",
+      "agents_skills_plug_me_in_scripts_classify_source_args",
+      "agents_skills_plug_me_in_scripts_classify_source_asjson",
+      "agents_skills_plug_me_in_scripts_classify_source_classification",
+      "agents_skills_plug_me_in_scripts_classify_source_out",
+      "agents_skills_plug_me_in_scripts_detect_harness",
+      "agents_skills_plug_me_in_scripts_detect_harness_args",
+      "agents_skills_plug_me_in_scripts_detect_harness_asjson",
+      "agents_skills_plug_me_in_scripts_detect_harness_cwd",
+      "agents_skills_plug_me_in_scripts_detect_harness_result",
+      "agents_skills_plug_me_in_scripts_explain_harness",
+      "agents_skills_plug_me_in_scripts_explain_harness_args",
+      "agents_skills_plug_me_in_scripts_explain_harness_asjson",
+      "agents_skills_plug_me_in_scripts_explain_harness_cwd",
+      "agents_skills_plug_me_in_scripts_explain_harness_globalskills",
+      "agents_skills_plug_me_in_scripts_explain_harness_harness",
+      "agents_skills_plug_me_in_scripts_explain_harness_labels",
+      "agents_skills_plug_me_in_scripts_explain_harness_mcp",
+      "agents_skills_plug_me_in_scripts_explain_harness_models",
+      "agents_skills_plug_me_in_scripts_explain_harness_out",
+      "agents_skills_plug_me_in_scripts_explain_harness_projectskills",
+      "agents_skills_plug_me_in_scripts_explain_harness_section",
+      "agents_skills_plug_me_in_scripts_install_finish",
+      "agents_skills_plug_me_in_scripts_lib_shared_boolflag",
+      "agents_skills_plug_me_in_scripts_lib_shared_detectharness",
+      "agents_skills_plug_me_in_scripts_lib_shared_flag",
+      "agents_skills_plug_me_in_scripts_lib_shared_harness_ids",
+      "agents_skills_plug_me_in_scripts_lib_shared_loadharnessmatrixsection",
+      "agents_skills_plug_me_in_scripts_lib_shared_parseargs",
+      "agents_skills_plug_me_in_scripts_lib_shared_printjson",
+      "agents_skills_plug_me_in_scripts_lib_shared_printreport",
+      "agents_skills_plug_me_in_scripts_lib_shared_skills_cli_agents"
+    ],
+    "4": [
+      "agents_skills_convert_to_polyglot_scripts_lib_bridges",
+      "agents_skills_convert_to_polyglot_scripts_lib_bridges_adapthooks",
+      "agents_skills_convert_to_polyglot_scripts_lib_bridges_escapeyaml",
+      "agents_skills_convert_to_polyglot_scripts_lib_bridges_generateallbridges",
+      "agents_skills_convert_to_polyglot_scripts_lib_bridges_mergeupstreammcp",
+      "agents_skills_convert_to_polyglot_scripts_lib_bridges_titleize",
+      "agents_skills_convert_to_polyglot_scripts_lib_bridges_writeagentsmd",
+      "agents_skills_convert_to_polyglot_scripts_lib_bridges_writeaiplugin",
+      "agents_skills_convert_to_polyglot_scripts_lib_bridges_writecompatmanifests",
+      "agents_skills_convert_to_polyglot_scripts_lib_bridges_writecopilot",
+      "agents_skills_convert_to_polyglot_scripts_lib_bridges_writecursorrules",
+      "agents_skills_convert_to_polyglot_scripts_lib_bridges_writegrok",
+      "agents_skills_convert_to_polyglot_scripts_lib_bridges_writemcp",
+      "agents_skills_convert_to_polyglot_scripts_lib_bridges_writemcpserver",
+      "agents_skills_convert_to_polyglot_scripts_lib_bridges_writereadme",
+      "agents_skills_convert_to_polyglot_scripts_lib_bridges_writerootpackagejson",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_chmodexec",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_writejson",
+      "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_writetext"
+    ],
+    "5": [
+      "facts_agents_md",
+      "facts_mcp",
+      "facts_okf_knowledgebase",
+      "facts_open_skills",
+      "facts_polyglot_plugin",
+      "references_okf_plugin_type_things_knowledge_package_2026_07_claude",
+      "references_okf_plugin_type_things_knowledge_package_2026_07_codex",
+      "references_okf_plugin_type_things_knowledge_package_2026_07_copilot",
+      "references_okf_plugin_type_things_knowledge_package_2026_07_cursor",
+      "references_okf_plugin_type_things_knowledge_package_2026_07_devin",
+      "references_okf_plugin_type_things_knowledge_package_2026_07_gemini",
+      "references_okf_plugin_type_things_knowledge_package_2026_07_opencode",
+      "references_okf_plugin_type_things_knowledge_package_2026_07_warp"
+    ],
+    "6": [
+      "agents_skills_convert_to_polyglot_scripts_vendor_source",
+      "agents_skills_convert_to_polyglot_scripts_vendor_source_args",
+      "agents_skills_convert_to_polyglot_scripts_vendor_source_commandsdir",
+      "agents_skills_convert_to_polyglot_scripts_vendor_source_dest",
+      "agents_skills_convert_to_polyglot_scripts_vendor_source_exclude",
+      "agents_skills_convert_to_polyglot_scripts_vendor_source_hasmcp",
+      "agents_skills_convert_to_polyglot_scripts_vendor_source_hasskills",
+      "agents_skills_convert_to_polyglot_scripts_vendor_source_layout",
+      "agents_skills_convert_to_polyglot_scripts_vendor_source_licenseroots",
+      "agents_skills_convert_to_polyglot_scripts_vendor_source_mcpfiles",
+      "agents_skills_convert_to_polyglot_scripts_vendor_source_pluginroot",
+      "agents_skills_convert_to_polyglot_scripts_vendor_source_source"
+    ],
+    "7": [
+      "convert_to_polyglot_references_conversion_playbook",
+      "convert_to_polyglot_references_plugin_manifest_formats",
+      "plug_me_in_references_harness_install_matrix",
+      "plug_me_in_references_source_routing",
+      "polyglot_plugin_references_cross_cutting_standards",
+      "polyglot_plugin_references_okf_foundations_and_tier_c",
+      "polyglot_plugin_references_okf_plugin_type_things_knowledge_package_2026_07",
+      "readme_convert_to_polyglot",
+      "readme_okf_plugin_type_things_2026_07",
+      "readme_plug_me_in",
+      "readme_polyglot_plugin",
+      "readme_skills_in_this_repo"
+    ],
+    "8": [
+      "references_okf_plugin_type_things_knowledge_package_2026_07_aider"
+    ],
+    "9": [
+      "references_okf_plugin_type_things_knowledge_package_2026_07_cline"
+    ],
+    "10": [
+      "references_okf_plugin_type_things_knowledge_package_2026_07_continue"
+    ],
+    "11": [
+      "references_okf_plugin_type_things_knowledge_package_2026_07_goose"
+    ],
+    "12": [
+      "references_okf_plugin_type_things_knowledge_package_2026_07_grok"
+    ],
+    "13": [
+      "references_okf_plugin_type_things_knowledge_package_2026_07_junie"
+    ],
+    "14": [
+      "references_okf_plugin_type_things_knowledge_package_2026_07_kilo"
+    ],
+    "15": [
+      "references_okf_plugin_type_things_knowledge_package_2026_07_kiro"
+    ],
+    "16": [
+      "references_okf_plugin_type_things_knowledge_package_2026_07_qwen"
+    ],
+    "17": [
+      "references_okf_plugin_type_things_knowledge_package_2026_07_roo"
+    ],
+    "18": [
+      "references_okf_plugin_type_things_knowledge_package_2026_07_zed"
+    ]
+  },
+  "cohesion": {
+    "0": 0.09433962264150944,
+    "1": 0.08879492600422834,
+    "2": 0.10661268556005399,
+    "3": 0.07661290322580645,
+    "4": 0.2807017543859649,
+    "5": 0.3076923076923077,
+    "6": 0.16666666666666666,
+    "7": 0.16666666666666666,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0
+  },
+  "gods": [
+    {
+      "id": "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_writetext",
+      "label": "writeText()",
+      "degree": 18
+    },
+    {
+      "id": "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_pathexists",
+      "label": "pathExists()",
+      "degree": 17
+    },
+    {
+      "id": "agents_skills_convert_to_polyglot_scripts_lib_bridges_generateallbridges",
+      "label": "generateAllBridges()",
+      "degree": 15
+    },
+    {
+      "id": "agents_skills_convert_to_polyglot_scripts_run_fixtures_main",
+      "label": "main()",
+      "degree": 15
+    },
+    {
+      "id": "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_ensuredir",
+      "label": "ensureDir()",
+      "degree": 14
+    },
+    {
+      "id": "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_readtext",
+      "label": "readText()",
+      "degree": 14
+    },
+    {
+      "id": "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_isdir",
+      "label": "isDir()",
+      "degree": 12
+    },
+    {
+      "id": "agents_skills_plug_me_in_scripts_lib_shared_pathexists",
+      "label": "pathExists()",
+      "degree": 12
+    },
+    {
+      "id": "agents_skills_convert_to_polyglot_scripts_lib_fs_utils_writejson",
+      "label": "writeJson()",
+      "degree": 11
+    },
+    {
+      "id": "agents_skills_convert_to_polyglot_scripts_lib_skill_md_discoversourcelayout",
+      "label": "discoverSourceLayout()",
+      "degree": 11
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Claude Code",
+      "target": "Model Context Protocol (MCP)",
+      "source_files": [
+        ".agents/skills/polyglot-plugin/references/okf-plugin-type-things-knowledge-package-2026-07/tier-a-harnesses.md",
+        "facts/mcp/index.html"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `Claude Code` unexpectedly reaches hub `Model Context Protocol (MCP)`"
+    },
+    {
+      "source": "Claude Code",
+      "target": "Open Skills / Agent Skills",
+      "source_files": [
+        ".agents/skills/polyglot-plugin/references/okf-plugin-type-things-knowledge-package-2026-07/tier-a-harnesses.md",
+        "facts/open-skills/index.html"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `Claude Code` unexpectedly reaches hub `Open Skills / Agent Skills`"
+    },
+    {
+      "source": "Cursor",
+      "target": "Model Context Protocol (MCP)",
+      "source_files": [
+        ".agents/skills/polyglot-plugin/references/okf-plugin-type-things-knowledge-package-2026-07/tier-a-harnesses.md",
+        "facts/mcp/index.html"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `Cursor` unexpectedly reaches hub `Model Context Protocol (MCP)`"
+    },
+    {
+      "source": "Cursor",
+      "target": "Open Skills / Agent Skills",
+      "source_files": [
+        ".agents/skills/polyglot-plugin/references/okf-plugin-type-things-knowledge-package-2026-07/tier-a-harnesses.md",
+        "facts/open-skills/index.html"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `Cursor` unexpectedly reaches hub `Open Skills / Agent Skills`"
+    },
+    {
+      "source": "GitHub Copilot / VS Code",
+      "target": "Model Context Protocol (MCP)",
+      "source_files": [
+        ".agents/skills/polyglot-plugin/references/okf-plugin-type-things-knowledge-package-2026-07/tier-a-harnesses.md",
+        "facts/mcp/index.html"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `GitHub Copilot / VS Code` unexpectedly reaches hub `Model Context Protocol (MCP)`"
+    }
+  ],
+  "tokens": {
+    "input": 99200,
+    "output": 6754
+  }
+}
