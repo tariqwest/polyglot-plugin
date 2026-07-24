@@ -1,6 +1,6 @@
 # OKF knowledgebase — state of "plugin type things" (2026-07 / July 2026)
 
-**Status:** living mini-OKF  
+**Status:** living mini-OKF — expanded knowledge package available at [`okf-plugin-type-things-knowledge-package-2026-07/`](./okf-plugin-type-things-knowledge-package-2026-07)  
 **As-of:** `2026-07` (July 2026)  
 **Last reviewed:** 2026-07-24 (Tier B/C deep dive same day)  
 **Owner skill:** `polyglot-plugin`  
