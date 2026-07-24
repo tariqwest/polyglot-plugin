@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AGENTS.md</title>
+  <meta name="description" content="AGENTS.md is an always-on instruction file convention used by AI coding agents to load project-level and user-level guidance at the start of every session.">
+  <link rel="canonical" href="https://polyglot-plugin.dev/facts/agents-md/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "name": "AGENTS.md",
+    "description": "AGENTS.md is an always-on instruction file convention used by AI coding agents to load project-level and user-level guidance at the start of every session. It is supported by OpenAI Codex, Kilo Code, Roo Code, Zed, Junie, and others.",
+    "url": "https://polyglot-plugin.dev/facts/agents-md/",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "AGENTS.md Convention",
+      "url": "https://agents.md"
+    },
+    "dateModified": "2026-07-24"
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="/">polyglot-plugin</a>
+  </nav>
+</header>
+
+<main>
+
+<h1>AGENTS.md</h1>
+
+<p class="lead-definition">
+  <strong>AGENTS.md</strong> is an always-on instruction file convention used by AI coding agents
+  to load project-level and user-level guidance at the start of every session.
+</p>
+
+<p>
+  AGENTS.md operates in the AI agent instructions segment. It is supported by OpenAI Codex, Kilo
+  Code, Roo Code, Zed, Junie, and others. Some harnesses also read <code>CLAUDE.md</code> as a
+  compatible equivalent.
+</p>
+
+<p>
+  AGENTS.md is distinct from Open Skills (which uses progressive disclosure and on-demand
+  activation) and from MCP (which is a live tool protocol). AGENTS.md is always-on context, loaded
+  before any user turn.
+</p>
+
+<h2>AGENTS.md: Core data</h2>
+
+<dl class="data-grid">
+  <dt>Entity type</dt>
+  <dd>File convention / instruction standard</dd>
+
+  <dt>Category</dt>
+  <dd>AI agent instructions, project configuration</dd>
+
+  <dt>Activation</dt>
+  <dd>Always-on (loaded at session start, before any user turn)</dd>
+
+  <dt>Hierarchy</dt>
+  <dd>User (<code>~/.codex/AGENTS.md</code>) &rarr; project root &rarr; current working directory</dd>
+
+  <dt>Supporting harnesses</dt>
+  <dd>OpenAI Codex, Kilo Code, Roo Code, Zed, Junie, Aider (via <code>read:</code>), Qwen (if context fileName includes it)</dd>
+
+  <dt>Convention hub</dt>
+  <dd><a href="https://agents.md">https://agents.md</a></dd>
+
+  <dt>GitHub</dt>
+  <dd><a href="https://github.com/openai/agents.md">github.com/openai/agents.md</a></dd>
+
+  <dt>Last reviewed</dt>
+  <dd>2026-07-24</dd>
+</dl>
+
+<h2>AGENTS.md: Hierarchy and discovery</h2>
+
+<p>
+  Codex loads <code>AGENTS.md</code> hierarchically from <code>~/.codex</code> through the project
+  root down to the current working directory. Other harnesses follow similar root-and-subdir
+  patterns. The file is plain Markdown with no required frontmatter.
+</p>
+
+<h2>Distinguishing AGENTS.md</h2>
+
+<dl>
+  <dt>Not Open Skills</dt>
+  <dd>Open Skills uses progressive disclosure (metadata always, body on invoke). AGENTS.md is always-on and fully loaded at session start.</dd>
+
+  <dt>Not CLAUDE.md</dt>
+  <dd>CLAUDE.md is the Claude Code-specific instruction file. AGENTS.md is the cross-agent convention. Some harnesses read both; AGENTS.md is preferred for cross-agent portability.</dd>
+
+  <dt>Not CONVENTIONS.md</dt>
+  <dd>CONVENTIONS.md is the Aider-specific convention, loaded via <code>read:</code> in <code>.aider.conf.yml</code>. AGENTS.md is broader.</dd>
+
+  <dt>Not MCP</dt>
+  <dd>MCP exposes live tools. AGENTS.md provides static, always-on text guidance.</dd>
+</dl>
+
+<h2>AGENTS.md: Related entities</h2>
+
+<ul>
+  <li><a href="../polyglot-plugin/">Polyglot Plugin</a> &mdash; includes an AGENTS.md bridge artifact for AGENTS.md-reading harnesses.</li>
+  <li><a href="../open-skills/">Open Skills</a> &mdash; complementary on-demand instruction format.</li>
+  <li><a href="../mcp/">Model Context Protocol</a> &mdash; complementary live tool protocol.</li>
+</ul>
+
+<h2>AGENTS.md: Sources and recency</h2>
+
+<dl>
+  <dt>Status</dt>
+  <dd>Active</dd>
+  <dt>Last reviewed</dt>
+  <dd>2026-07-24</dd>
+</dl>
+
+<ul>
+  <li><a href="https://agents.md">agents.md</a> &mdash; convention hub</li>
+  <li><a href="https://github.com/openai/agents.md">github.com/openai/agents.md</a> &mdash; GitHub repository</li>
+  <li><a href="https://developers.openai.com/codex/guides/agents-md">developers.openai.com/codex/guides/agents-md</a> &mdash; Codex AGENTS.md guide</li>
+</ul>
+
+</main>
+
+<footer>
+  <nav>
+    <a href="/">Home</a>
+    |
+    <a href="/facts/">Facts</a>
+    |
+    <a href="https://github.com/tariqwest/polyglot-plugin">Repository</a>
+  </nav>
+  <p>
+    <small>
+      Grounding Page Standard v1.6 &mdash;
+      <a href="https://groundingpage.com/spec/">groundingpage.com/spec</a>
+    </small>
+  </p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OKF plugin-type knowledgebase</title>
+  <meta name="description" content="The OKF plugin-type knowledgebase is a dated, living knowledgebase of what each AI agent harness calls plugins, skills, rules, extensions, and MCP, with official documentation links and polyglot bridge guidance.">
+  <link rel="canonical" href="https://polyglot-plugin.dev/facts/okf-knowledgebase/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "OKF plugin-type knowledgebase",
+    "description": "The OKF plugin-type knowledgebase is a dated, living knowledgebase of what each AI agent harness calls plugins, skills, rules, extensions, and MCP, with official documentation links and polyglot bridge guidance. Maintained as part of the polyglot-plugin skill.",
+    "url": "https://polyglot-plugin.dev/facts/okf-knowledgebase/",
+    "license": "https://spdx.org/licenses/MIT",
+    "creator": {
+      "@type": "Person",
+      "name": "tariqwest"
+    },
+    "isPartOf": {
+      "@type": "SoftwareApplication",
+      "name": "polyglot-plugin",
+      "url": "https://github.com/tariqwest/polyglot-plugin"
+    },
+    "dateCreated": "2026-07",
+    "dateModified": "2026-07-24",
+    "keywords": [
+      "OKF",
+      "open knowledge format",
+      "plugin-type things",
+      "AI agent harness",
+      "plugin",
+      "skill",
+      "rule",
+      "extension",
+      "MCP"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="/">polyglot-plugin</a>
+  </nav>
+</header>
+
+<main>
+
+<h1>OKF plugin-type knowledgebase</h1>
+
+<p class="lead-definition">
+  The <strong>OKF plugin-type knowledgebase</strong> is a dated, living knowledgebase of what each
+  AI agent harness calls plugins, skills, rules, extensions, and MCP, with official documentation
+  links and polyglot bridge guidance.
+</p>
+
+<p>
+  The knowledgebase operates in the AI agent extensibility research segment. It is maintained as
+  part of the <code>polyglot-plugin</code> skill and is the authoritative source for bridge
+  decisions in generated packages.
+</p>
+
+<p>
+  The knowledgebase is distinct from a plugin package (it is reference data, not an installable
+  unit) and from a marketplace (it is not a registry of installable plugins). It is a structured
+  snapshot of harness extensibility surfaces, refreshed periodically.
+</p>
+
+<h2>OKF plugin-type knowledgebase: Core data</h2>
+
+<dl class="data-grid">
+  <dt>Entity type</dt>
+  <dd>Knowledgebase / reference dataset</dd>
+
+  <dt>Category</dt>
+  <dd>AI agent extensibility research, documentation</dd>
+
+  <dt>Owner skill</dt>
+  <dd><code>polyglot-plugin</code></dd>
+
+  <dt>Current snapshot</dt>
+  <dd><code>references/okf-plugin-type-things-2026-07.md</code> (July 2026)</dd>
+
+  <dt>Expanded package</dt>
+  <dd><code>references/okf-plugin-type-things-knowledge-package-2026-07/</code></dd>
+
+  <dt>Catalog source</dt>
+  <dd><code>~/Developer/config-clis/.agents/plans/config-clis.md</code></dd>
+
+  <dt>Coverage</dt>
+  <dd>43 primary catalog ids + aliases + split pairs (Tier A, B, C)</dd>
+
+  <dt>Refresh cadence</dt>
+  <dd>Quarterly or on harness API changes; filename month bumped on major refresh</dd>
+
+  <dt>Last reviewed</dt>
+  <dd>2026-07-24</dd>
+</dl>
+
+<h2>OKF plugin-type knowledgebase: Tier structure</h2>
+
+<p>
+  The knowledgebase classifies harnesses into three tiers:
+</p>
+
+<dl>
+  <dt>Tier A &mdash; full official plugin/skills surfaces</dt>
+  <dd>Claude Code, Cursor, Codex, Copilot/VS Code, OpenCode, Gemini CLI, Devin/Windsurf, Warp. Authoritative for polyglot packaging.</dd>
+
+  <dt>Tier B &mdash; partial / MCP-first / instructions-first</dt>
+  <dd>Continue, Cline, Roo, Goose, Zed, Junie/PyCharm, Kiro, Aider, Kilo, Qwen, Grok Build, legacy OpenAI plugins. Have official extension surfaces but varying Open Skills support.</dd>
+
+  <dt>Tier C &mdash; guide-only / research-at-implement</dt>
+  <dd>Desktop/app shells, CLI/TUI agents, and suite utilities with no stable plugin/skill manifest surface. Polyglot default: use <code>.agents/skills</code>, AGENTS.md, and MCP; do not invent vendor manifests.</dd>
+</dl>
+
+<h2>OKF plugin-type knowledgebase: Expanded package files</h2>
+
+<p>
+  The July 2026 expanded knowledge package contains:
+</p>
+
+<ul>
+  <li><code>README.md</code> &mdash; package overview and vocabulary</li>
+  <li><code>okf-foundations-and-tier-c.md</code> &mdash; vocabulary, quick matrix, Tier C, mapping rules, invariants</li>
+  <li><code>tier-a-harnesses.md</code> &mdash; full official plugin/skills surfaces</li>
+  <li><code>tier-b-harnesses.md</code> &mdash; partial / MCP-first / instructions-first surfaces</li>
+  <li><code>cross-cutting-standards.md</code> &mdash; Open Skills, MCP, instruction files, manifests, polyglot strategy</li>
+</ul>
+
+<h2>Distinguishing the OKF plugin-type knowledgebase</h2>
+
+<dl>
+  <dt>Not a plugin package</dt>
+  <dd>The knowledgebase is reference data used to generate packages. It is not itself installable.</dd>
+
+  <dt>Not a marketplace</dt>
+  <dd>It is not a registry of installable plugins. It is a structured snapshot of harness surfaces.</dd>
+
+  <dt>Not the Open Skills specification</dt>
+  <dd>It documents how harnesses discover Open Skills folders, but it is not the SKILL.md format specification.</dd>
+</dl>
+
+<h2>OKF plugin-type knowledgebase: Related entities</h2>
+
+<ul>
+  <li><a href="../polyglot-plugin/">Polyglot Plugin</a> &mdash; the package layout that the knowledgebase informs.</li>
+  <li><a href="../open-skills/">Open Skills</a> &mdash; the canonical skill format documented across harnesses.</li>
+  <li><a href="../mcp/">Model Context Protocol</a> &mdash; the transport standard documented across harnesses.</li>
+  <li><a href="../agents-md/">AGENTS.md</a> &mdash; the instruction convention documented across harnesses.</li>
+</ul>
+
+<h2>OKF plugin-type knowledgebase: Sources and recency</h2>
+
+<dl>
+  <dt>Status</dt>
+  <dd>Active (living document)</dd>
+  <dt>Created</dt>
+  <dd>2026-07</dd>
+  <dt>Last reviewed</dt>
+  <dd>2026-07-24</dd>
+  <dt>Maintenance interval</dt>
+  <dd>Reviewed quarterly, or immediately on catalog changes, harness API changes, or product status changes.</dd>
+</dl>
+
+<ul>
+  <li><code>references/okf-plugin-type-things-2026-07.md</code> &mdash; current snapshot</li>
+  <li><code>references/okf-plugin-type-things-knowledge-package-2026-07/</code> &mdash; expanded package</li>
+  <li><code>~/Developer/config-clis/.agents/plans/config-clis.md</code> &mdash; catalog source</li>
+</ul>
+
+</main>
+
+<footer>
+  <nav>
+    <a href="/">Home</a>
+    |
+    <a href="/facts/">Facts</a>
+    |
+    <a href="https://github.com/tariqwest/polyglot-plugin">Repository</a>
+  </nav>
+  <p>
+    <small>
+      Grounding Page Standard v1.6 &mdash;
+      <a href="https://groundingpage.com/spec/">groundingpage.com/spec</a>
+    </small>
+  </p>
+</footer>
+
+</body>
+</html>

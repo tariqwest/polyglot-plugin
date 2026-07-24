@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open Skills / Agent Skills</title>
+  <meta name="description" content="Open Skills is an open standard for portable SKILL.md folders that give AI agents on-demand, progressively disclosed expertise. Maintained at agentskills.io.">
+  <link rel="canonical" href="https://polyglot-plugin.dev/facts/open-skills/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "name": "Open Skills",
+    "description": "Open Skills is an open standard for portable SKILL.md folders that give AI agents on-demand, progressively disclosed expertise. The directory name and the name frontmatter field must match. Metadata is always loaded; the full body is loaded only when the skill is invoked.",
+    "url": "https://polyglot-plugin.dev/facts/open-skills/",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "Open Skills Specification",
+      "url": "https://agentskills.io"
+    },
+    "dateModified": "2026-07-24"
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="/">polyglot-plugin</a>
+  </nav>
+</header>
+
+<main>
+
+<h1>Open Skills / Agent Skills</h1>
+
+<p class="lead-definition">
+  <strong>Open Skills</strong> is an open standard for portable <code>SKILL.md</code> folders that
+  give AI agents on-demand, progressively disclosed expertise.
+</p>
+
+<p>
+  Open Skills operates in the AI agent extensibility segment. It is the closest thing to a
+  cross-tool format for reusable task knowledge and is referenced by Claude Code, Codex, Devin,
+  Gemini CLI, OpenCode, Kilo, Qwen, and others.
+</p>
+
+<p>
+  Open Skills is distinct from a plugin (which is a distributable bundle that may contain skills)
+  and from MCP (which is a live tool protocol). Open Skills defines the instruction-pack format,
+  not the bundle or the transport.
+</p>
+
+<h2>Open Skills: Core data</h2>
+
+<dl class="data-grid">
+  <dt>Entity type</dt>
+  <dd>Open standard / file format convention</dd>
+
+  <dt>Category</dt>
+  <dd>AI agent extensibility, knowledge packaging</dd>
+
+  <dt>Primary unit</dt>
+  <dd>Directory containing a <code>SKILL.md</code> file</dd>
+
+  <dt>Required frontmatter</dt>
+  <dd><code>name</code>, <code>description</code></dd>
+
+  <dt>Optional frontmatter</dt>
+  <dd><code>license</code>, <code>compatibility</code>, <code>metadata</code>, <code>allowed-tools</code></dd>
+
+  <dt>Discovery model</dt>
+  <dd>Progressive disclosure: metadata always, body on invoke, references on demand</dd>
+
+  <dt>Specification hub</dt>
+  <dd><a href="https://agentskills.io">https://agentskills.io</a></dd>
+
+  <dt>GitHub</dt>
+  <dd><a href="https://github.com/agentskills/agentskills">github.com/agentskills/agentskills</a></dd>
+
+  <dt>Last reviewed</dt>
+  <dd>2026-07-24</dd>
+</dl>
+
+<h2>Open Skills: Canonical layout</h2>
+
+<p>
+  A skill is a directory that contains, at minimum, a <code>SKILL.md</code> file. The directory
+  name and the <code>name</code> frontmatter field must match. Supporting files live next to
+  <code>SKILL.md</code> and are loaded only when referenced.
+</p>
+
+<pre><code>.agents/skills/&lt;skill-name&gt;/
+  SKILL.md              # metadata + instructions
+  references/           # deep reference material (loaded on demand)
+  scripts/              # helper scripts the skill may invoke
+  assets/               # images, schemas, templates
+</code></pre>
+
+<h2>Open Skills: Discovery roots</h2>
+
+<p>
+  Harnesses that natively discover Open Skills folders typically scan these roots:
+</p>
+
+<ul>
+  <li>Project: <code>.agents/skills/</code>, <code>.claude/skills/</code>, <code>.cursor/skills/</code>, <code>.gemini/skills/</code>, <code>.opencode/skills/</code></li>
+  <li>User: <code>~/.agents/skills/</code>, <code>~/.claude/skills/</code>, <code>~/.cursor/skills/</code></li>
+  <li>System / admin: varies by harness</li>
+</ul>
+
+<h2>Distinguishing Open Skills</h2>
+
+<dl>
+  <dt>Not a plugin</dt>
+  <dd>A plugin is a distributable bundle that may contain skills, agents, hooks, and MCP servers. Open Skills defines the skill folder format, not the bundle.</dd>
+
+  <dt>Not MCP</dt>
+  <dd>MCP exposes live tools over a protocol. Open Skills defines static, on-demand instruction packs.</dd>
+
+  <dt>Not AGENTS.md</dt>
+  <dd>AGENTS.md is an always-on instruction file. Open Skills uses progressive disclosure: metadata always, body only on invoke.</dd>
+</dl>
+
+<h2>Open Skills: Related entities</h2>
+
+<ul>
+  <li><a href="../polyglot-plugin/">Polyglot Plugin</a> &mdash; uses Open Skills as its canonical source of truth.</li>
+  <li><a href="../mcp/">Model Context Protocol (MCP)</a> &mdash; complementary transport for live tools.</li>
+  <li><a href="../agents-md/">AGENTS.md</a> &mdash; complementary always-on instruction convention.</li>
+</ul>
+
+<h2>Open Skills: Sources and recency</h2>
+
+<dl>
+  <dt>Status</dt>
+  <dd>Active</dd>
+  <dt>Last reviewed</dt>
+  <dd>2026-07-24</dd>
+</dl>
+
+<ul>
+  <li><a href="https://agentskills.io">agentskills.io</a> &mdash; specification hub</li>
+  <li><a href="https://github.com/agentskills/agentskills">github.com/agentskills/agentskills</a> &mdash; GitHub repository</li>
+</ul>
+
+</main>
+
+<footer>
+  <nav>
+    <a href="/">Home</a>
+    |
+    <a href="/facts/">Facts</a>
+    |
+    <a href="https://github.com/tariqwest/polyglot-plugin">Repository</a>
+  </nav>
+  <p>
+    <small>
+      Grounding Page Standard v1.6 &mdash;
+      <a href="https://groundingpage.com/spec/">groundingpage.com/spec</a>
+    </small>
+  </p>
+</footer>
+
+</body>
+</html>

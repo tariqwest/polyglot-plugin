@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Model Context Protocol (MCP)</title>
+  <meta name="description" content="Model Context Protocol (MCP) is an open protocol that exposes live tools, resources, and prompts to AI agents over stdio or HTTP transports.">
+  <link rel="canonical" href="https://polyglot-plugin.dev/facts/mcp/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "name": "Model Context Protocol",
+    "alternateName": "MCP",
+    "description": "Model Context Protocol (MCP) is an open protocol that exposes live tools, resources, and prompts to AI agents over stdio or Streamable HTTP transports. It is the primary transport layer for executable tools in a Polyglot Plugin package.",
+    "url": "https://polyglot-plugin.dev/facts/mcp/",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "Model Context Protocol Specification",
+      "url": "https://modelcontextprotocol.io"
+    },
+    "dateModified": "2026-07-24"
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="/">polyglot-plugin</a>
+  </nav>
+</header>
+
+<main>
+
+<h1>Model Context Protocol (MCP)</h1>
+
+<p class="lead-definition">
+  <strong>Model Context Protocol (MCP)</strong> is an open protocol that exposes live tools,
+  resources, and prompts to AI agents over stdio or HTTP transports.
+</p>
+
+<p>
+  MCP operates in the AI agent tooling segment. It is supported by Claude Code, Claude Desktop,
+  Cursor, Cline, Continue, Zed, Kilo, Goose, Junie, GitHub Copilot, VS Code, and others.
+</p>
+
+<p>
+  MCP is distinct from Open Skills (which defines static instruction packs) and from a plugin
+  package (which bundles skills and optionally an MCP server). MCP is the transport layer for live
+  tool execution, not the knowledge or bundle format.
+</p>
+
+<h2>Model Context Protocol: Core data</h2>
+
+<dl class="data-grid">
+  <dt>Entity type</dt>
+  <dd>Open protocol / standard</dd>
+
+  <dt>Category</dt>
+  <dd>AI agent tooling, live tool integration</dd>
+
+  <dt>Transports</dt>
+  <dd>stdio (preferred for local agents), Streamable HTTP (for remote/shared services)</dd>
+
+  <dt>Deprecated transport</dt>
+  <dd>HTTP+SSE (deprecated 2025-03-26 in favor of Streamable HTTP)</dd>
+
+  <dt>Exposes</dt>
+  <dd>Tools, resources, prompts</dd>
+
+  <dt>Specification</dt>
+  <dd><a href="https://modelcontextprotocol.io">https://modelcontextprotocol.io</a></dd>
+
+  <dt>Config shapes</dt>
+  <dd><code>mcpServers</code> (Claude, Cursor, Cline, Copilot), <code>context_servers</code> (Zed), <code>extensions</code> (Goose), <code>mcp</code> block (Kilo)</dd>
+
+  <dt>Last reviewed</dt>
+  <dd>2026-07-24</dd>
+</dl>
+
+<h2>Model Context Protocol: Config shapes by harness</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Harness</th>
+      <th>Config key</th>
+      <th>Typical file</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Claude Code</td><td><code>mcpServers</code></td><td><code>.mcp.json</code></td></tr>
+    <tr><td>Claude Desktop</td><td><code>mcpServers</code></td><td><code>claude_desktop_config.json</code></td></tr>
+    <tr><td>Cursor</td><td><code>mcpServers</code></td><td><code>.cursor/mcp.json</code> or <code>.cursor-plugin/mcp.json</code></td></tr>
+    <tr><td>Cline</td><td><code>mcpServers</code></td><td>VS Code MCP settings</td></tr>
+    <tr><td>Continue</td><td><code>mcpServers</code></td><td><code>.continue/mcpServers/*.yaml</code></td></tr>
+    <tr><td>Zed</td><td><code>context_servers</code></td><td><code>settings.json</code></td></tr>
+    <tr><td>Kilo Code</td><td><code>mcp</code> (<code>type: local|remote</code>)</td><td><code>kilo.jsonc</code></td></tr>
+    <tr><td>Goose</td><td><code>extensions</code></td><td><code>~/.config/goose/config.yaml</code></td></tr>
+    <tr><td>GitHub Copilot / VS Code</td><td><code>mcpServers</code> / <code>servers</code></td><td><code>.vscode/mcp.json</code> or <code>.github/mcp.json</code></td></tr>
+  </tbody>
+</table>
+
+<h2>Distinguishing Model Context Protocol</h2>
+
+<dl>
+  <dt>Not Open Skills</dt>
+  <dd>Open Skills defines static instruction packs. MCP exposes live, executable tools.</dd>
+
+  <dt>Not a plugin package</dt>
+  <dd>A plugin package may include an MCP server, but MCP is one transport layer within a package, not the package format itself.</dd>
+
+  <dt>Not an API gateway</dt>
+  <dd>MCP is agent-facing and tool-oriented, not a general-purpose HTTP API gateway.</dd>
+</dl>
+
+<h2>Model Context Protocol: Related entities</h2>
+
+<ul>
+  <li><a href="../polyglot-plugin/">Polyglot Plugin</a> &mdash; packages may include an MCP server via <code>mcp.json</code>.</li>
+  <li><a href="../open-skills/">Open Skills</a> &mdash; complementary instruction-pack format.</li>
+</ul>
+
+<h2>Model Context Protocol: Sources and recency</h2>
+
+<dl>
+  <dt>Status</dt>
+  <dd>Active</dd>
+  <dt>Last reviewed</dt>
+  <dd>2026-07-24</dd>
+</dl>
+
+<ul>
+  <li><a href="https://modelcontextprotocol.io">modelcontextprotocol.io</a> &mdash; specification</li>
+</ul>
+
+</main>
+
+<footer>
+  <nav>
+    <a href="/">Home</a>
+    |
+    <a href="/facts/">Facts</a>
+    |
+    <a href="https://github.com/tariqwest/polyglot-plugin">Repository</a>
+  </nav>
+  <p>
+    <small>
+      Grounding Page Standard v1.6 &mdash;
+      <a href="https://groundingpage.com/spec/">groundingpage.com/spec</a>
+    </small>
+  </p>
+</footer>
+
+</body>
+</html>

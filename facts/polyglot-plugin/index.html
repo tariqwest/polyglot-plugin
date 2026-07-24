@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Block 02: Clear page title — the entity name, not a slogan -->
+  <title>Polyglot Plugin</title>
+  <meta name="description" content="Polyglot Plugin is a universal plugin package layout that makes a single skill or tool discoverable and usable by multiple AI agent harnesses simultaneously.">
+
+  <!-- Open Graph mirrors the lead definition -->
+  <meta property="og:title" content="Polyglot Plugin">
+  <meta property="og:description" content="Polyglot Plugin is a universal plugin package layout that makes a single skill or tool discoverable and usable by multiple AI agent harnesses simultaneously.">
+  <meta property="og:type" content="article">
+
+  <!-- Canonical URL — update to the real deployed domain when published -->
+  <link rel="canonical" href="https://polyglot-plugin.dev/facts/polyglot-plugin/">
+
+  <!-- Block 08: JSON-LD mirroring — mirrors the visible facts, nothing hidden -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Polyglot Plugin",
+    "applicationCategory": "DeveloperApplication",
+    "softwareVersion": "1.1.0",
+    "description": "Polyglot Plugin is a universal plugin package layout that makes a single skill or tool discoverable and usable by multiple AI agent harnesses simultaneously. It uses a canonical Open Skills SKILL.md as the source of truth and emits per-harness bridge artifacts so the same expertise works across Claude Code, Cursor, Codex, GitHub Copilot, VS Code, Devin, Windsurf, Gemini CLI, OpenCode, Kiro, Warp, Grok Build, and others.",
+    "url": "https://polyglot-plugin.dev/facts/polyglot-plugin/",
+    "license": "https://spdx.org/licenses/MIT",
+    "author": {
+      "@type": "Person",
+      "name": "tariqwest"
+    },
+    "keywords": [
+      "polyglot plugin",
+      "agent skills",
+      "open skills",
+      "SKILL.md",
+      "cross-agent plugin",
+      "universal skill package",
+      "MCP",
+      "AGENTS.md",
+      "AI agent extensibility"
+    ],
+    "isPartOf": {
+      "@type": "SoftwareApplication",
+      "name": "polyglot-plugin",
+      "url": "https://github.com/tariqwest/polyglot-plugin"
+    },
+    "dateCreated": "2026-07",
+    "dateModified": "2026-07-24"
+  }
+  </script>
+</head>
+
+<body>
+
+<!-- Block 10: Brand and page design — regular header/footer would go here in a real site -->
+<header>
+  <nav>
+    <a href="/">polyglot-plugin</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- Block 02: H1 names the entity, not an ad claim -->
+<h1>Polyglot Plugin</h1>
+
+<!-- Block 03: Unambiguous lead definition — definition, placement, distinction -->
+<p class="lead-definition">
+  <strong>Polyglot Plugin</strong> is a universal plugin package layout that makes a single skill or
+  tool discoverable and usable by multiple AI agent harnesses simultaneously.
+</p>
+
+<p>
+  Polyglot Plugin operates in the AI agent extensibility segment. It targets coding agents, CLI
+  agents, and IDE-based agents that each define their own plugin, skill, rule, or extension
+  discovery paths.
+</p>
+
+<p>
+  Polyglot Plugin is distinct from a single-harness plugin (which targets one agent only) and from
+  a marketplace (which is a registry of many independent plugins). A Polyglot Plugin is one package
+  that contains the correct discovery artifact for each supported agent, all pointing at one
+  canonical source of truth.
+</p>
+
+<!-- Block 05: Structured facts — attribute and value, unambiguous -->
+<h2>Polyglot Plugin: Core data</h2>
+
+<dl class="data-grid">
+  <dt>Entity type</dt>
+  <dd>Software package layout / open convention</dd>
+
+  <dt>Category</dt>
+  <dd>AI agent extensibility, developer tooling</dd>
+
+  <dt>Canonical source of truth</dt>
+  <dd><code>.agents/skills/&lt;name&gt;/SKILL.md</code> (Open Skills / Agent Skills format)</dd>
+
+  <dt>Primary standard</dt>
+  <dd>Open Skills (<a href="https://agentskills.io">agentskills.io</a>)</dd>
+
+  <dt>Transport for live tools</dt>
+  <dd>Model Context Protocol (MCP), stdio preferred</dd>
+
+  <dt>License</dt>
+  <dd>MIT</dd>
+
+  <dt>Current version</dt>
+  <dd>1.1.0</dd>
+
+  <dt>Author</dt>
+  <dd>tariqwest</dd>
+
+  <dt>Repository</dt>
+  <dd><a href="https://github.com/tariqwest/polyglot-plugin">github.com/tariqwest/polyglot-plugin</a></dd>
+
+  <dt>First released</dt>
+  <dd>2026-07</dd>
+
+  <dt>Last reviewed</dt>
+  <dd>2026-07-24</dd>
+</dl>
+
+<!-- Block 04: Self-contained sections — entity name in load-bearing H2 -->
+<h2>Polyglot Plugin: Package structure</h2>
+
+<p>
+  A Polyglot Plugin is a root directory that contains a canonical Open Skills skill under
+  <code>.agents/skills/&lt;name&gt;/SKILL.md</code> plus per-harness bridge artifacts. The
+  <code>SKILL.md</code> file is the single source of truth. Every other artifact either imports,
+  mirrors, or points to it.
+</p>
+
+<p>
+  The canonical layout:
+</p>
+
+<pre><code>{{skill-name}}/
+├── .agents/
+│   └── skills/
+│       └── {{skill-name}}/
+│           ├── SKILL.md          # Canonical source of truth
+│           ├── scripts/          # Executable tools (Python/Bash)
+│           ├── references/       # Static knowledge docs
+│           └── assets/           # Templates, raw data
+├── .cursor/
+│   └── rules/
+│       └── {{skill-name}}.mdc   # Cursor discovery
+├── .github/
+│   └── copilot-instructions.md  # VS Code Copilot discovery
+├── .grok/
+│   └── config.toml              # Grok Build discovery
+├── AGENTS.md                    # Codex / OpenAI / Kilo / Roo / Zed / Junie
+├── ai-plugin.json               # Legacy OpenAI plugin manifest
+├── mcp.json                     # MCP server definition
+└── README.md                    # Human documentation
+</code></pre>
+
+<p>
+  The folder name under <code>.agents/skills/</code> must equal the <code>name:</code> field in
+  <code>SKILL.md</code> frontmatter. Several harnesses fail silently when these mismatch.
+</p>
+
+<h2>Polyglot Plugin: Supported agent harnesses</h2>
+
+<p>
+  Polyglot Plugin targets the following AI agent harnesses. Each harness discovers the package
+  through its own bridge artifact while sharing the same canonical <code>SKILL.md</code>.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Agent harness</th>
+      <th>What it calls plugins</th>
+      <th>Primary discovery path</th>
+      <th>Bridge artifact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Claude Code</td>
+      <td>plugins, skills, agents, hooks, MCP, LSP</td>
+      <td><code>.claude-plugin/plugin.json</code>, <code>.claude/skills</code>, <code>.agents/skills</code></td>
+      <td><code>.agents/skills</code> + optional <code>mcp.json</code></td>
+    </tr>
+    <tr>
+      <td>Cursor</td>
+      <td>plugins, skills, rules, MCP, hooks</td>
+      <td><code>.cursor-plugin/</code>, <code>.cursor/skills</code>, <code>.cursor/rules</code></td>
+      <td><code>.cursor/rules/&lt;name&gt;.mdc</code> + <code>.agents/skills</code></td>
+    </tr>
+    <tr>
+      <td>OpenAI Codex CLI</td>
+      <td>skills, plugins, AGENTS.md, MCP, subagents</td>
+      <td><code>.agents/skills</code>, <code>AGENTS.md</code></td>
+      <td><code>.agents/skills</code> + <code>AGENTS.md</code></td>
+    </tr>
+    <tr>
+      <td>GitHub Copilot / VS Code</td>
+      <td>plugins, agent skills, custom instructions, MCP</td>
+      <td><code>.github/skills</code>, <code>.github/copilot-instructions.md</code></td>
+      <td><code>.github/copilot-instructions.md</code> + <code>.agents/skills</code></td>
+    </tr>
+    <tr>
+      <td>Devin / Windsurf</td>
+      <td>skills, rules, workflows, plugins</td>
+      <td><code>.devin/skills</code>, <code>.windsurf/skills</code>, <code>.agents/skills</code></td>
+      <td><code>.agents/skills</code></td>
+    </tr>
+    <tr>
+      <td>Gemini CLI</td>
+      <td>extensions, agent skills, custom commands</td>
+      <td><code>.gemini/skills</code>, <code>.agents/skills</code></td>
+      <td><code>.agents/skills</code> + optional <code>gemini-extension.json</code></td>
+    </tr>
+    <tr>
+      <td>OpenCode</td>
+      <td>skills, agents, plugins (npm), AGENTS.md</td>
+      <td><code>.opencode/skills</code>, <code>.agents/skills</code></td>
+      <td><code>.agents/skills</code> + <code>AGENTS.md</code></td>
+    </tr>
+    <tr>
+      <td>Kiro</td>
+      <td>steering, skills, MCP</td>
+      <td><code>.kiro/</code>, <code>.agents/skills</code></td>
+      <td><code>.agents/skills</code> + <code>mcp.json</code></td>
+    </tr>
+    <tr>
+      <td>Warp / Oz</td>
+      <td>skills, rules, Warp Drive, MCP</td>
+      <td><code>.agents/skills</code>, Warp Drive</td>
+      <td><code>.agents/skills</code> + <code>AGENTS.md</code></td>
+    </tr>
+    <tr>
+      <td>Grok Build</td>
+      <td>skills, plugins, marketplaces, hooks</td>
+      <td><code>.grok/config.toml</code> &rarr; <code>.agents/skills</code></td>
+      <td><code>.grok/config.toml</code></td>
+    </tr>
+    <tr>
+      <td>Cline</td>
+      <td>skills, rules, MCP, marketplace</td>
+      <td><code>.cline/skills</code>, <code>.agents/skills</code></td>
+      <td><code>.agents/skills</code> + <code>mcp.json</code></td>
+    </tr>
+    <tr>
+      <td>Kilo Code</td>
+      <td>skills, AGENTS.md, MCP, marketplace</td>
+      <td><code>.kilo/skills</code>, <code>.agents/skills</code></td>
+      <td><code>.agents/skills</code> + <code>AGENTS.md</code></td>
+    </tr>
+    <tr>
+      <td>Qwen Code</td>
+      <td>skills, extensions, context files</td>
+      <td><code>.qwen/skills</code>, <code>.agents/skills</code></td>
+      <td><code>.agents/skills</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Polyglot Plugin: Bridge artifacts</h2>
+
+<p>
+  Bridge artifacts are per-harness files that map the canonical <code>SKILL.md</code> to each
+  agent's discovery logic. They do not contain independent content; they import, mirror, or point
+  to the canonical skill.
+</p>
+
+<dl>
+  <dt><code>.agents/skills/&lt;name&gt;/SKILL.md</code></dt>
+  <dd>Canonical source of truth. Satisfies all Open Skills-compatible harnesses.</dd>
+
+  <dt><code>.cursor/rules/&lt;name&gt;.mdc</code></dt>
+  <dd>Cursor rule file that imports or inlines the skill body.</dd>
+
+  <dt><code>.github/copilot-instructions.md</code></dt>
+  <dd>VS Code Copilot workspace-level instructions, condensed from the skill.</dd>
+
+  <dt><code>AGENTS.md</code></dt>
+  <dd>Always-on instructions for Codex, Kilo, Roo, Zed, Junie, and other AGENTS.md readers.</dd>
+
+  <dt><code>.grok/config.toml</code></dt>
+  <dd>Grok Build skill path pointer.</dd>
+
+  <dt><code>mcp.json</code></dt>
+  <dd>MCP server definition for all MCP-capable harnesses (Claude Code, Cursor, Kiro, Cline, etc.).</dd>
+
+  <dt><code>ai-plugin.json</code></dt>
+  <dd>Legacy OpenAI plugin manifest for generic plugin harnesses and backward compatibility.</dd>
+</dl>
+
+<h2>Polyglot Plugin: Critical invariants</h2>
+
+<p>
+  The following invariants are enforced by the polyglot-plugin generator and must hold for every
+  generated package:
+</p>
+
+<ol>
+  <li>
+    The folder name under the skills root equals the <code>name:</code> frontmatter field
+    (kebab-case). Harnesses such as Kiro fail silently when these mismatch.
+  </li>
+  <li>
+    The <code>description</code> field is a trigger for embedding-based matchers, not marketing
+    copy. It must state what the skill does and when to use it.
+  </li>
+  <li>
+    Prefer stdio MCP for live tools. Never embed secrets in manifests; use environment references.
+  </li>
+  <li>
+    Keep <code>SKILL.md</code> lean. Move bulk reference material to <code>references/</code>.
+  </li>
+  <li>
+    Never install an entire marketplace as one plugin unit. A marketplace is a registry of many
+    independent plugins.
+  </li>
+</ol>
+
+<!-- Block 06: Disambiguation — woven into a dedicated section -->
+<h2>Distinguishing Polyglot Plugin</h2>
+
+<p>
+  Polyglot Plugin is not the same as any of the following related concepts:
+</p>
+
+<dl>
+  <dt>Not a single-harness plugin</dt>
+  <dd>
+    A single-harness plugin targets one agent (e.g., a Claude Code plugin or a Cursor plugin).
+    A Polyglot Plugin targets many agents from one package.
+  </dd>
+
+  <dt>Not a marketplace</dt>
+  <dd>
+    A marketplace is a registry of many independent plugins. A Polyglot Plugin is one package
+    that works across harnesses. Users install one unit at a time.
+  </dd>
+
+  <dt>Not the Open Skills standard itself</dt>
+  <dd>
+    Open Skills (<a href="https://agentskills.io">agentskills.io</a>) defines the
+    <code>SKILL.md</code> folder format. Polyglot Plugin uses Open Skills as its canonical source
+    of truth and adds per-harness bridge artifacts around it.
+  </dd>
+
+  <dt>Not MCP</dt>
+  <dd>
+    MCP (Model Context Protocol) is a protocol for live tools, resources, and prompts. Polyglot
+    Plugin packages may include an MCP server via <code>mcp.json</code>, but MCP is one transport
+    layer, not the package format.
+  </dd>
+
+  <dt>Not AGENTS.md</dt>
+  <dd>
+    <code>AGENTS.md</code> is an always-on instruction file convention. A Polyglot Plugin may
+    include an <code>AGENTS.md</code> bridge, but the canonical source is the
+    <code>SKILL.md</code>, not the instructions file.
+  </dd>
+
+  <dt>Not a tool or script collection</dt>
+  <dd>
+    Scripts in <code>scripts/</code> are optional executable helpers. The package format is
+    defined by the discovery artifacts and the canonical <code>SKILL.md</code>, not by the
+    scripts.
+  </dd>
+</dl>
+
+<!-- Block 09: Internal linking — related entities -->
+<h2>Polyglot Plugin: Related entities</h2>
+
+<p>
+  The following related entities are part of the polyglot-plugin project domain. Each is a
+  separate entity with its own facts:
+</p>
+
+<ul>
+  <li>
+    <strong><a href="./open-skills/">Open Skills / Agent Skills</a></strong> &mdash; the
+    <code>SKILL.md</code> folder standard maintained at
+    <a href="https://agentskills.io">agentskills.io</a>. The canonical source format used by
+    Polyglot Plugin.
+  </li>
+  <li>
+    <strong><a href="./mcp/">Model Context Protocol (MCP)</a></strong> &mdash; the open protocol
+    for exposing live tools, resources, and prompts to AI agents. Used as the transport layer for
+    executable tools in a Polyglot Plugin.
+  </li>
+  <li>
+    <strong><a href="./agents-md/">AGENTS.md</a></strong> &mdash; the always-on instruction file
+    convention used by Codex, Kilo, Roo, Zed, Junie, and others. One of the bridge artifacts in a
+    Polyglot Plugin.
+  </li>
+  <li>
+    <strong><a href="./okf-knowledgebase/">OKF plugin-type knowledgebase</a></strong> &mdash; the
+    dated, living knowledgebase of what each AI agent harness calls plugins, skills, rules, and
+    extensions. Maintained at
+    <code>references/okf-plugin-type-things-2026-07.md</code> and expanded in the
+    <code>okf-plugin-type-things-knowledge-package-2026-07/</code> directory.
+  </li>
+  <li>
+    <strong>polyglot-plugin skill</strong> &mdash; the generator skill that produces Polyglot
+    Plugin packages from a purpose description. See
+    <a href="https://github.com/tariqwest/polyglot-plugin">the repository</a>.
+  </li>
+  <li>
+    <strong>convert-to-polyglot skill</strong> &mdash; the migration skill that converts an
+    existing single-harness plugin into the polyglot layout.
+  </li>
+  <li>
+    <strong>plug-me-in skill</strong> &mdash; the consumer skill that detects the current harness
+    and installs a skill, plugin, MCP server, or marketplace unit into it.
+  </li>
+</ul>
+
+<!-- Optional FAQ -->
+<h2>FAQ about Polyglot Plugin</h2>
+
+<h3>What is a Polyglot Plugin?</h3>
+<p>
+  A Polyglot Plugin is a universal plugin package layout that makes one skill or tool discoverable
+  by multiple AI agent harnesses from a single directory. It uses a canonical
+  <code>SKILL.md</code> as the source of truth and emits per-harness bridge artifacts.
+</p>
+
+<h3>Why is a Polyglot Plugin needed?</h3>
+<p>
+  No single file format satisfies every AI agent. Each harness defines its own discovery paths,
+  manifest schemas, and terminology. A Polyglot Plugin provides the correct artifact for each
+  harness while maintaining one canonical source of truth.
+</p>
+
+<h3>How does a Polyglot Plugin differ from an Open Skills skill?</h3>
+<p>
+  An Open Skills skill is a single <code>SKILL.md</code> folder. A Polyglot Plugin wraps an Open
+  Skills skill as its canonical core and adds bridge artifacts (Cursor rules, AGENTS.md, MCP
+  config, Grok config, Copilot instructions, legacy manifest) so the same skill is discovered by
+  harnesses that do not natively scan <code>.agents/skills</code>.
+</p>
+
+<h3>Which agents support Polyglot Plugin packages?</h3>
+<p>
+  Claude Code, Cursor, OpenAI Codex CLI, GitHub Copilot, VS Code, Devin, Windsurf, Gemini CLI,
+  OpenCode, Kiro, Warp, Grok Build, Cline, Kilo Code, and Qwen Code. Additional harnesses are
+  covered in the OKF knowledgebase.
+</p>
+
+<!-- Block 07: Sources and recency -->
+<h2>Polyglot Plugin: Sources and recency</h2>
+
+<dl>
+  <dt>Status</dt>
+  <dd>Active</dd>
+
+  <dt>Created</dt>
+  <dd>2026-07</dd>
+
+  <dt>Last reviewed</dt>
+  <dd>2026-07-24</dd>
+
+  <dt>Maintenance interval</dt>
+  <dd>Reviewed every 3 to 6 months, or immediately on harness API changes, new discovery paths, or product status changes.</dd>
+
+  <dt>Editorial owner</dt>
+  <dd>polyglot-plugin skill maintainers</dd>
+</dl>
+
+<h3>Primary sources</h3>
+
+<ul>
+  <li>
+    Open Skills specification &mdash;
+    <a href="https://agentskills.io">https://agentskills.io</a>
+  </li>
+  <li>
+    Model Context Protocol specification &mdash;
+    <a href="https://modelcontextprotocol.io">https://modelcontextprotocol.io</a>
+  </li>
+  <li>
+    AGENTS.md convention &mdash;
+    <a href="https://agents.md">https://agents.md</a>
+  </li>
+  <li>
+    OKF plugin-type knowledgebase (July 2026) &mdash;
+    <code>references/okf-plugin-type-things-2026-07.md</code> and
+    <code>references/okf-plugin-type-things-knowledge-package-2026-07/</code>
+  </li>
+  <li>
+    polyglot-plugin skill &mdash;
+    <code>.agents/skills/polyglot-plugin/SKILL.md</code>
+  </li>
+  <li>
+    Per-harness official documentation &mdash; see the OKF quick matrix for current links
+  </li>
+</ul>
+
+</main>
+
+<!-- Block 10: Brand and page design — regular footer -->
+<footer>
+  <nav>
+    <a href="/">Home</a>
+    |
+    <a href="/facts/">Facts</a>
+    |
+    <a href="https://github.com/tariqwest/polyglot-plugin">Repository</a>
+  </nav>
+
+  <!-- Block 11: Standard reference kept discreet -->
+  <p>
+    <small>
+      Grounding Page Standard v1.6 &mdash;
+      <a href="https://groundingpage.com/spec/">groundingpage.com/spec</a>
+    </small>
+  </p>
+</footer>
+
+</body>
+</html>
