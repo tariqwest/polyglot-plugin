@@ -5,6 +5,14 @@
 |---|---|
 | `polyglot-plugin` | Greenfield: generate a new polyglot plugin/skill package from a purpose description |
 | `convert-to-polyglot` | Migration: convert an existing single-harness plugin (Claude/Cursor/etc.) into the polyglot layout — process captured from the Understand-Anything port |
+| `plug-me-in` | Consumer: explain the current harness plugin model and install a skill/plugin/MCP/marketplace unit into that harness (automation + manual fallback) |
+
+### OKF: state of “plugin type things” (dated)
+
+Living mini knowledgebase of official docs per config-clis catalog client:
+
+- [`.agents/skills/polyglot-plugin/references/okf-plugin-type-things-2026-07.md`](.agents/skills/polyglot-plugin/references/okf-plugin-type-things-2026-07.md) — **July 2026** snapshot (links + summaries for plugins/skills/rules/extensions/MCP).
+- Refresh instructions live in the `polyglot-plugin` skill body. Catalog source: `~/Developer/config-clis/.agents/plans/`.
 
 ```bash
 # Convert an upstream plugin
@@ -13,6 +21,13 @@ node .agents/skills/convert-to-polyglot/scripts/convert.mjs \
   --dest ~/Developer/harness-plugins/my-plugin \
   --name my-plugin \
   --env-root MY_PLUGIN_ROOT
+
+# Install a skill/plugin into the current harness (detect + classify + copy/MCP merge)
+node .agents/skills/plug-me-in/scripts/detect-harness.mjs
+node .agents/skills/plug-me-in/scripts/install.mjs \
+  --source owner/repo \
+  --harness warp \
+  --cwd .
 ```
 
 To achieve maximum compatibility across modern AI agents (Claude, Codex, Cursor, Devin, Warp, Kiro, Grok Build, etc.), you cannot rely on a single file format. instead, you must structure your plugin as a Polyglot Package. [1, 2, 3, 4, 5] 

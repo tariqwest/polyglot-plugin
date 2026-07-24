@@ -1,7 +1,7 @@
 ---
 name: polyglot-plugin
-description: "Generate a universal polyglot plugin package that works across all major AI agents and harnesses (Claude Code, Cursor, Devin, Kiro, Warp/Oz, Codex, Grok Build, VSCode Copilot, OpenCode). Use this skill when the user wants to create a plugin, skill, or tool package that should be portable and discoverable by multiple agents. Triggers on: 'create a plugin', 'make this work in all agents', 'polyglot plugin', 'universal skill', 'cross-agent compatible', 'agent plugin', 'portable skill package', or when the user has built something for one agent and wants it to work everywhere."
-version: "1.0.0"
+description: "Generate a universal polyglot plugin package that works across all major AI agents and harnesses (Claude Code, Cursor, Devin, Kiro, Warp/Oz, Codex, Grok Build, VSCode Copilot, OpenCode). Use this skill when the user wants to create a plugin, skill, or tool package that should be portable and discoverable by multiple agents. Triggers on: 'create a plugin', 'make this work in all agents', 'polyglot plugin', 'universal skill', 'cross-agent compatible', 'agent plugin', 'portable skill package', or when the user has built something for one agent and wants it to work everywhere. Also use when researching what a harness calls plugins/skills or refreshing the dated plugin-type OKF knowledgebase."
+version: "1.1.0"
 author: "tariqwest"
 license: "MIT"
 ---
@@ -16,10 +16,36 @@ Generate a universal plugin package that is simultaneously discoverable and usab
 - User has an existing single-agent skill and wants to make it portable
 - User asks for a "universal" or "cross-agent" plugin
 - User wants to publish a tool that any coding agent can pick up
+- User asks what a harness calls plugins/skills, or needs official doc links for bridge choices
 
 ## Core Concept
 
 No single file format satisfies every agent. Instead, we produce a **polyglot package** — a directory that contains the correct discovery artifact for each major agent, all pointing at one canonical source of truth: the `SKILL.md`.
+
+## Embedded OKF knowledgebase (dated, updatable)
+
+Before inventing bridges or claiming what a client supports, **read** the mini OKF:
+
+- **Current snapshot:** `references/okf-plugin-type-things-2026-07.md`
+- **As-of:** July 2026 (`2026-07`)
+- **Catalog source:** `~/Developer/config-clis/.agents/plans/config-clis.md` client ids
+- **Companion install paths:** sibling skill `plug-me-in/references/harness-install-matrix.md`
+
+The OKF summarizes, for each catalog harness/client, official names for "plugin type things" (plugins, skills, rules, extensions, MCP, marketplaces), primary discovery paths, **official documentation links**, and the polyglot artifact that targets them.
+
+### When generating packages
+
+1. Open the OKF quick matrix for the target client ids.
+2. Prefer Tier A official surfaces; mark Tier C as guide-only in the package README.
+3. If official docs disagree with this skill’s layout examples, **prefer official docs** and update the OKF (bump **Last reviewed**, edit changelog).
+
+### How to refresh the OKF
+
+1. Re-read the suite catalog in `config-clis/.agents/plans/config-clis.md` (and `config-plugins.md`).
+2. For each client id, fetch official docs (vendor docs site / GitHub `docs/`) — not random blogs.
+3. Update `references/okf-plugin-type-things-YYYY-MM.md` (rename month only on major refresh).
+4. Bump this skill `version` patch/minor and the OKF **Last reviewed** date.
+5. Keep vocabulary + polyglot mapping tables in sync with generator rules below.
 
 ## Package Structure
 
@@ -211,7 +237,7 @@ Place all executable logic in `scripts/`:
 
 ### 5. Write the README.md
 
-Human-facing documentation:
+Human-facing documentation. Base the compatibility matrix on the OKF quick matrix (`references/okf-plugin-type-things-2026-07.md`), not guesswork:
 
 ```markdown
 # {{Skill Title}}
@@ -222,14 +248,15 @@ Human-facing documentation:
 
 | Agent / Harness | Discovery Path | Status |
 |---|---|---|
-| Claude Code | `.agents/skills/` + `mcp.json` | ✅ |
-| Cursor | `.cursor/rules/` + `mcp.json` | ✅ |
+| Claude Code | `.agents/skills/` + `mcp.json` (+ optional `.claude-plugin/`) | ✅ |
+| Cursor | `.cursor/rules/` + skills + `mcp.json` | ✅ |
 | Kiro / Warp | `.agents/skills/` + `mcp.json` | ✅ |
-| Devin | `.agents/skills/` | ✅ |
-| Codex / OpenAI | `AGENTS.md` + `ai-plugin.json` | ✅ |
+| Devin / Cascade | `.agents/skills/` (also `.devin/` / `.windsurf/` native) | ✅ |
+| Codex / OpenAI | `AGENTS.md` + `.agents/skills` + `ai-plugin.json` | ✅ |
+| Gemini CLI | `.agents/skills/` / `.gemini/skills` (+ optional extension) | ✅ |
 | Grok Build | `.grok/config.toml` | ✅ |
-| VSCode Copilot | `.github/copilot-instructions.md` | ✅ |
-| OpenCode | `.agents/skills/` | ✅ |
+| VS Code / Copilot | `.github/skills` + `copilot-instructions.md` | ✅ |
+| OpenCode | `.agents/skills/` / `.opencode/skills` | ✅ |
 
 ## Installation
 
@@ -242,6 +269,11 @@ Clone or copy this directory into your project root.
 ## Dependencies
 
 {{List of required tools/runtimes}}
+
+## Docs snapshot
+
+Harness plugin-type vocabulary and official links: see polyglot-plugin OKF
+`references/okf-plugin-type-things-2026-07.md` (July 2026).
 ```
 
 ### 6. Validate the Package
@@ -261,6 +293,7 @@ After generation, verify:
 - Scripts must verify their own dependencies — agents run in varied sandboxed environments.
 - Keep SKILL.md under 500 lines. Use `references/` for large docs with clear pointers from the main file.
 - For MCP servers, use stdio transport (not HTTP) for maximum portability.
+- Treat `references/okf-plugin-type-things-*.md` as the living catalog of official plugin/skills docs; update it when harness APIs change instead of hard-coding stale paths only in prose.
 
 ## Conversion: Existing Single-Agent Skill → Polyglot
 
